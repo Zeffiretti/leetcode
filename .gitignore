@@ -9,3 +9,12 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+# build directory
+build/
+
+# vscode user settings
+.vscode/
+
+# clion user settings
+.idea/
