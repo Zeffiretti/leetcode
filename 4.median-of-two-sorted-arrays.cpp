@@ -77,7 +77,9 @@ int main(void) {
   Solution s;
   vector<int> a, b;
   a.push_back(1);
+  a.push_back(2);
   a.push_back(3);
+  b.push_back(1);
   b.push_back(2);
   std::cout << s.findMedianSortedArrays(a, b);
 }
