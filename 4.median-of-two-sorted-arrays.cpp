@@ -45,6 +45,7 @@ class Solution {
         // i is perfect
         double max_of_left = 0;
         double min_of_right = 0;
+        // todo: determin the mol and mor
         if (i == 0) {
           max_of_left = (double)num_long[j - 1];
         } else if (j == 0) {
