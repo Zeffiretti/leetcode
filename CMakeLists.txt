@@ -3,4 +3,4 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(leetcode 4.median-of-two-sorted-arrays.cpp)
+add_executable(leetcode 5.longest-palindromic-substring.cpp)
