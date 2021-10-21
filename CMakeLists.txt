@@ -3,4 +3,4 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(leetcode 151.reverse-words-in-a-string.cpp)
+add_executable(leetcode 380.insert-delete-get-random-o-1.cpp)
