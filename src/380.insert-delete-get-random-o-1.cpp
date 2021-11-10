@@ -3,8 +3,7 @@
  *
  * [380] Insert Delete GetRandom O(1)
  */
-#include <vector>
-#include <unordered_map>
+#include "utils.h"
 using namespace std;
 // @lc code=start
 class RandomizedSet {
