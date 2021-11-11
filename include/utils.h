@@ -4,5 +4,7 @@
 #include <unordered_map>
 #include <iostream>
 #include <stack>
+#include <cmath>
+#include <algorithm>
 using namespace std;
 #endif
