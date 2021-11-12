@@ -3,10 +3,7 @@
  *
  * [496] Next Greater Element I
  */
-#include <vector>
-#include <iostream>
-#include <unordered_map>
-#include <stack>
+#include "utils.h"
 using namespace std;
 // @lc code=start
 class Solution {

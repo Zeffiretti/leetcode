@@ -3,8 +3,7 @@
  *
  * [5] Longest Palindromic Substring
  */
-#include<iostream>
-#include <string>
+#include "utils.h"
 using namespace std;
 // @lc code=start
 class Solution {

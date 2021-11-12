@@ -3,8 +3,8 @@
  *
  * [4] Median of Two Sorted Arrays
  */
-#include <vector>
-#include <iostream>
+
+#include "utils.h"
 using namespace std;
 
 // @lc code=start
