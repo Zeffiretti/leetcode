@@ -6,6 +6,7 @@
 #include <stack>
 #include <cmath>
 #include <algorithm>
+#include <unordered_set>
 using namespace std;
 
 struct ListNode {
