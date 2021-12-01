@@ -3,6 +3,6 @@ project(leetcode)
 
 set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
-set(Pro_Num 721)
+set(Pro_Num 198)
 file(GLOB_RECURSE sol_file src/${Pro_Num}.*.cpp)
 add_executable(leetcode ${sol_file})
