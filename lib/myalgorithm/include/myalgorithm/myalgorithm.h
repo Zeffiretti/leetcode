@@ -128,5 +128,122 @@ void radixSort(std::vector<T> &nums) {
   }
 }
 
+// Radix sort with bucket
+template <typename T>
+void radixSortWithBucket(std::vector<T> &nums) {
+  int max_num = nums[0];
+  for (int i = 1; i < nums.size(); i++) {
+    if (nums[i] > max_num) {
+      max_num = nums[i];
+    }
+  }
+  int max_digit = 0;
+  while (max_num) {
+    max_num /= 10;
+    max_digit++;
+  }
+  std::vector<std::vector<T>> bucket(10, std::vector<T>());
+  for (int i = 0; i < nums.size(); i++) {
+    int digit = int(nums[i] / pow(10, max_digit - 1)) % 10;
+    bucket[digit].push_back(nums[i]);
+  }
+  int index = 0;
+  for (int i = 0; i < bucket.size(); i++) {
+    for (int j = 0; j < bucket[i].size(); j++) {
+      nums[index++] = bucket[i][j];
+    }
+  }
+}
+
+// Radix sort with counting sort
+template <typename T>
+void radixSortWithCountingSort(std::vector<T> &nums) {
+  int max_num = nums[0];
+  for (int i = 1; i < nums.size(); i++) {
+    if (nums[i] > max_num) {
+      max_num = nums[i];
+    }
+  }
+  int max_digit = 0;
+  while (max_num) {
+    max_num /= 10;
+    max_digit++;
+  }
+  for (int i = 0; i < max_digit; i++) {
+    std::vector<int> count(10, 0);
+    for (int j = 0; j < nums.size(); j++) {
+      int digit = int(nums[j] / pow(10, i)) % 10;
+      count[digit]++;
+    }
+    for (int j = 1; j < count.size(); j++) {
+      count[j] += count[j - 1];
+    }
+    std::vector<T> sorted(nums.size());
+    for (int j = nums.size() - 1; j >= 0; j--) {
+      int digit = int(nums[j] / pow(10, i)) % 10;
+      sorted[count[digit] - 1] = nums[j];
+      count[digit]--;
+    }
+    nums = sorted;
+  }
+}
+
+// select ith smallest of nums using Randomized divide-and-conquer algorithm
+template <typename T>
+T select(std::vector<T> &nums, int i) {
+  int left = 0;
+  int right = nums.size() - 1;
+  while (left <= right) {
+    int pivot = partition(nums, left, right);
+    if (pivot == i) {
+      return nums[pivot];
+    } else if (pivot < i) {
+      left = pivot + 1;
+    } else {
+      right = pivot - 1;
+    }
+  }
+  return -1;
+}
+
+// rand partition for select
+// template <typename T>
+// int partition(std::vector<T> &nums, int left, int right) {
+//   int pivot = rand() % (right - left + 1) + left;
+//   std::swap(nums[pivot], nums[right]);
+//   int i = left;
+//   for (int j = left; j < right; j++) {
+//     if (nums[j] <= nums[right]) {
+//       std::swap(nums[i], nums[j]);
+//       i++;
+//     }
+//   }
+//   std::swap(nums[i], nums[right]);
+//   return i;
+// }
+
+// select ith smallest of nums using Randomized divide-and-conquer algorithm
+// input: nums is a vector of type T
+//        p: start index
+//        q: end index
+//        i: rank
+// output: the ith smallest element
+template <typename T>
+T select(std::vector<T> &nums, int p, int q, int i) {
+  if (p == q) {
+    return nums[p];
+  }
+  int pivot = partition(nums, p, q);
+  int k = pivot - p + 1;
+  if (i == k) {
+    return nums[pivot];
+  } else if (i < k) {
+    return select(nums, p, pivot - 1, i);
+  } else {
+    return select(nums, pivot + 1, q, i - k);
+  }
+}
+
+
 }  // namespace mAlg
 #endif // MYALGORITHM_H

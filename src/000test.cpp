@@ -26,8 +26,10 @@ int main(int argc, char **arhv) {
     std::cout << i << " ";
   }
   std::cout << std::endl;
+  //select the 3rd smallest element
+  std::cout << "3rd smallest element: " << mAlg::select(nums, 0, nums.size()-1, 10) << std::endl;
   //sort the nums using heap sort
-  mAlg::radixSort(nums);
+  mAlg::heapSort(nums);
   // print the sorted vector
   std::cout << "sorted nums: ";
   for (auto i : nums) {
