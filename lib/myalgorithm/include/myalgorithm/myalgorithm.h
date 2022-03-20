@@ -38,6 +38,33 @@ void quickSort(std::vector<T> &nums, int left, int right) {
   quickSort(nums, pivot + 1, right);
 }
 
+// random partition
+template <typename T>
+int randomPartition(std::vector<T> &nums, int left, int right) {
+  int pivot = left + rand() % (right - left + 1);
+  std::swap(nums[pivot], nums[left]);
+  return partition(nums, left, right);
+}
+
+// random quick sort
+template <typename T>
+void randomQuickSort(std::vector<T> &nums, int left, int right) {
+  if (left >= right) return;
+  int pivot = randomPartition(nums, left, right);
+  randomQuickSort(nums, left, pivot - 1);
+  randomQuickSort(nums, pivot + 1, right);
+}
+
+// binary search
+template <typename T>
+int binarySearch(std::vector<T> &nums, int left, int right, T target) {
+  if (left > right) return -1;
+  int mid = left + (right - left) / 2;
+  if (nums[mid] == target) return mid;
+  if (nums[mid] > target) return binarySearch(nums, left, mid - 1, target);
+  return binarySearch(nums, mid + 1, right, target);
+}
+
 //heapify method
 template <typename T>
 void heapify(std::vector<T> &nums, int size, int i) {
@@ -221,6 +248,38 @@ T select(std::vector<T> &nums, int i) {
 //   std::swap(nums[i], nums[right]);
 //   return i;
 // }
+
+// select ith smallest of nums using dividing them into 5 groups
+template <typename T>
+T selectWithGroups(std::vector<T> &nums, int i) {
+  // divide nums into 5 froups
+  int group_size = nums.size() / 5;
+  std::vector<std::vector<T>> groups(5, std::vector<T>());
+  for (int i = 0; i < nums.size(); i++) {
+    groups[i / group_size].push_back(nums[i]);
+  }
+  // recursicely select the median of each group to be pivot
+  for (int i = 0; i < groups.size(); i++) {
+    groups[i] = {select(groups[i], groups[i].size() / 2)};
+  }
+  // partition the groups around the pivot x, let k=rank(x)
+  // if k < i, recursively select the (i-k)th smallest of the right group
+  // if k == i, then x is the ith smallest
+  // if k > i, recursively select the ith smallest of the left group
+  std::vector<T> pivot(groups.size());
+  for (int i = 0; i < groups.size(); i++) {
+    pivot[i] = groups[i][0];
+  }
+  int k = partition(pivot, 0, pivot.size() - 1);
+  if (k == i) {
+    return pivot[k];
+  } else if (k < i) {
+    return selectWithGroups(groups[k], i - k);
+  } else {
+    return selectWithGroups(groups[k + 1], i - k - 1);
+  }
+  return -1;
+}
 
 // select ith smallest of nums using Randomized divide-and-conquer algorithm
 // input: nums is a vector of type T
