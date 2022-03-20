@@ -17,7 +17,7 @@ class Solution {
     }
     nums[index] = nums[nums.size() - 1];
     index++;
-    return index + 1;
+    return index;
   }
 };
 // @lc code=end
