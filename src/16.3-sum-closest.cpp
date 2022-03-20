@@ -8,7 +8,7 @@
 class Solution {
  public:
   int threeSumClosest(vector<int> &nums, int target) {
-    int res = INT_MAX;
+    int res = 1e5;
     sort(nums.begin(), nums.end());
     for (int i = 0; i < nums.size() - 2; i++) {
       if (i > 0 && nums[i] == nums[i - 1]) {
