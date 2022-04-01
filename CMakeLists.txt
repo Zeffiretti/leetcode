@@ -14,10 +14,10 @@ endif()
 
 include_directories(include)
 
-set(Pro_Num 28)
+set(Pro_Num 43)
 file(GLOB_RECURSE main_file src/${Pro_Num}.*.cpp)
 file(GLOB_RECURSE sol_file src/*.cpp)
 add_library(Solution ${sol_file})
 add_executable(leetcode ${main_file})
-add_executable(test_node src/000test.cpp)
-target_link_libraries(test_node myAlgorithm)
+add_executable(test_node src/alitest.cpp)
+# target_link_libraries(test_node myAlgorithm)
