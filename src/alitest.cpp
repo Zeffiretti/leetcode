@@ -4,13 +4,13 @@ using namespace std;
 
 
 // my queue implementation
-
+template <typename T>
 struct ListNode {
-  int val;
+  T val;
   ListNode *next;
   ListNode() : val(0), next(nullptr) {}
-  ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode *next) : val(x), next(next) {}
+  ListNode(T x) : val(x), next(nullptr) {}
+  ListNode(T x, ListNode *next) : val(x), next(next) {}
 };
 
 
@@ -23,13 +23,13 @@ class MyQueue {
   }
   ~MyQueue() {
     while (head) {
-      ListNode *tmp = head;
+      ListNode<T> *tmp = head;
       head = head->next;
       delete tmp;
     }
   }
   void push(T val) {
-    ListNode *tmp = new ListNode(val);
+    ListNode<T> *tmp = new ListNode<T>(val);
     if (tail) {
       tail->next = tmp;
     }
@@ -43,7 +43,7 @@ class MyQueue {
       return -1;
     }
     T val = head->val;
-    ListNode *tmp = head;
+    ListNode<T> *tmp = head;
     head = head->next;
     delete tmp;
     if (!head) {
@@ -67,8 +67,8 @@ class MyQueue {
     return !head;
   }
  private:
-  ListNode *head;
-  ListNode *tail;
+  ListNode<int> *head;
+  ListNode<int> *tail;
 };
 
 
@@ -79,10 +79,17 @@ int main() {
   queue.push(2);
   queue.push(3);
   queue.push(4);
+  queue.push(5);
+  cout << queue.front() << endl;
+  cout << queue.back() << endl;
+  cout << "-----" << endl;
 
   //pop them
   cout << queue.pop() << endl;
   cout << queue.pop() << endl;
+  cout << "-----" << endl;
+  cout << queue.front() << endl;
+  cout << queue.back() << endl;
 
   return 0;
 }

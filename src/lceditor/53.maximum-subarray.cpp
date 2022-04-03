@@ -8,7 +8,6 @@
 class Solution {
  public:
   int maxSubArray(vector<int> &nums) {
-    if (nums.size() == 0) return NULL;
     int res = INT_MIN;
     int f_n = -1;
     for (int i = 0; i < nums.size(); ++i) {
