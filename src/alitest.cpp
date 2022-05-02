@@ -1,95 +1,55 @@
+#include <cstdio>
 #include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <ctime>
 #include <vector>
+#include <unordered_map>
+#include <string>
 using namespace std;
 
+// 输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
+// 输出: [3,3,5,5,6,7]
 
-// my queue implementation
-template <typename T>
-struct ListNode {
-  T val;
-  ListNode *next;
-  ListNode() : val(0), next(nullptr) {}
-  ListNode(T x) : val(x), next(nullptr) {}
-  ListNode(T x, ListNode *next) : val(x), next(next) {}
-};
+vector<int> maxSlideWindow(vector<int> &nums, int k) {
+  vector<int> ans;
+  int n = nums.size();
+  // int max_num = -INFINITY;
+  // for (int i = 0; i < k; ++i) {
+  //   max_num = max(max_num, nums[i]);
+  // }
+  // ans.push_back(max_num);
+  // for (int i = k; i < n; ++i) {
+  //   if (nums[i] > ans[ans.size() - 1]) {
+  //     ans.push_back(nums[i]);
+  //   }else{
+  //   }
+  // }
 
-
-// my queue implementation
-template <typename T>
-class MyQueue {
- public:
-  MyQueue() {
-    head = tail = nullptr;
-  }
-  ~MyQueue() {
-    while (head) {
-      ListNode<T> *tmp = head;
-      head = head->next;
-      delete tmp;
+  // method 1:
+  for (int i = 0; i < n - k + 1; ++i) {
+    int max_num = -INFINITY;
+    if (ans.size() != 0 && nums[i] > ans[ans.size() - 1]) {
+      ans.push_back(nums[i]);
+      break;
     }
-  }
-  void push(T val) {
-    ListNode<T> *tmp = new ListNode<T>(val);
-    if (tail) {
-      tail->next = tmp;
+    for (int j = i; j < i + k; ++j) {
+      max_num = max(max_num, nums[j]);
     }
-    tail = tmp;
-    if (!head) {
-      head = tail;
-    }
+    ans.push_back(max_num);
   }
-  T pop() {
-    if (!head) {
-      return -1;
-    }
-    T val = head->val;
-    ListNode<T> *tmp = head;
-    head = head->next;
-    delete tmp;
-    if (!head) {
-      tail = nullptr;
-    }
-    return val;
-  }
-  T front() {
-    if (!head) {
-      return -1;
-    }
-    return head->val;
-  }
-  T back() {
-    if (!tail) {
-      return -1;
-    }
-    return tail->val;
-  }
-  bool empty() {
-    return !head;
-  }
- private:
-  ListNode<int> *head;
-  ListNode<int> *tail;
-};
+  return ans;
+}
 
 
-int main() {
-  //一个队列
-  MyQueue<int> queue;
-  queue.push(1);
-  queue.push(2);
-  queue.push(3);
-  queue.push(4);
-  queue.push(5);
-  cout << queue.front() << endl;
-  cout << queue.back() << endl;
-  cout << "-----" << endl;
 
-  //pop them
-  cout << queue.pop() << endl;
-  cout << queue.pop() << endl;
-  cout << "-----" << endl;
-  cout << queue.front() << endl;
-  cout << queue.back() << endl;
-
+int main(int argc, char **argv) {
+  vector<int> nums = {1, 3, -1, -3, 5, 3, 6, 7};
+  int k = 3;
+  vector<int> ans = maxSlideWindow(nums, k);
+  for (int i = 0; i < ans.size(); ++i) {
+    cout << ans[i] << " ";
+  }
   return 0;
 }

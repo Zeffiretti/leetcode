@@ -116,26 +116,32 @@ bool solveNQ() {
 int main(int argc, char **arhv) {
   // std::cout << "good" << std::endl;
 
-  // // initilize a vector randomly of int
-  // std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  // // shuffle the vector
-  // std::random_shuffle(nums.begin(), nums.end());
-  // // print the vector
-  // std::cout << "nums: ";
-  // for (auto i : nums) {
-  //   std::cout << i << " ";
-  // }
-  // std::cout << std::endl;
-  // //select the 3rd smallest element
-  // std::cout << "3rd smallest element: " << mAlg::select(nums, 0, nums.size()-1, 10) << std::endl;
-  // //sort the nums using heap sort
-  // mAlg::heapSort(nums);
-  // // print the sorted vector
-  // std::cout << "sorted nums: ";
-  // for (auto i : nums) {
-  //   std::cout << i << " ";
-  // }
-  // std::cout << std::endl;
-  solveNQ();
+  // initilize a vector randomly of int
+  std::vector<int> nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  // shuffle the vector
+  std::random_shuffle(nums.begin(), nums.end());
+  // print the vector
+  std::cout << "nums: ";
+  for (auto i : nums) {
+    std::cout << i << " ";
+  }
+  std::cout << std::endl;
+  mAlg::quickSort(nums, 0, nums.size() - 1);
+  std::cout << "sorted nums: ";
+  for (auto i : nums) {
+    std::cout << i << " ";
+  }
+  std::cout << std::endl;
+  //select the 3rd smallest element
+  // std::cout << "3rd smallest element: " << mAlg::select(nums, 0, nums.size() - 1, 10) << std::endl;
+  //sort the nums using heap sort
+  mAlg::heapSort(nums);
+  // print the sorted vector
+  std::cout << "sorted nums: ";
+  for (auto i : nums) {
+    std::cout << i << " ";
+  }
+  std::cout << std::endl;
+  // solveNQ();
   return 0;
 }
