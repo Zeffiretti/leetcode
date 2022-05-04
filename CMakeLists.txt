@@ -14,7 +14,7 @@ endif()
 
 include_directories(include)
 
-set(Pro_Num 43)
+set(Pro_Num 93)
 file(GLOB_RECURSE main_file src/${Pro_Num}.*.cpp)
 file(GLOB_RECURSE sol_file src/lceditor/*.cpp)
 file(GLOB_RECURSE alg_file src/data-structure/*.cpp)

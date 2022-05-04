@@ -8,6 +8,9 @@
 class Solution {
  public:
   bool exist(vector<vector<char>> &board, string word) {
+    if (word.empty()) {
+      return true;
+    }
     int m = board.size();
     if (m == 0) {
       return false;
@@ -26,8 +29,8 @@ class Solution {
     }
     return false;
   }
-  bool dfs(vector<vector<char>> &board, string &word, int index, int i,
-           int j, vector<vector<bool>> &visited) {
+  bool dfs(vector<vector<char>> &board, string &word, int index, int i, int j,
+           vector<vector<bool>> &visited) {
     if (index == word.size()) {
       return true;
     }
@@ -43,7 +46,6 @@ class Solution {
       return true;
     }
     visited[i][j] = false;
-
     return false;
   }
 };

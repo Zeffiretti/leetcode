@@ -7,49 +7,23 @@
 #include <vector>
 #include <unordered_map>
 #include <string>
+#include <stack>
+
+#include "for-offer/for-offer-09.h"
+#include "for-offer/for-offer-03.h"
 using namespace std;
 
-// 输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
-// 输出: [3,3,5,5,6,7]
 
-vector<int> maxSlideWindow(vector<int> &nums, int k) {
-  vector<int> ans;
-  int n = nums.size();
-  // int max_num = -INFINITY;
-  // for (int i = 0; i < k; ++i) {
-  //   max_num = max(max_num, nums[i]);
-  // }
-  // ans.push_back(max_num);
-  // for (int i = k; i < n; ++i) {
-  //   if (nums[i] > ans[ans.size() - 1]) {
-  //     ans.push_back(nums[i]);
-  //   }else{
-  //   }
-  // }
-
-  // method 1:
-  for (int i = 0; i < n - k + 1; ++i) {
-    int max_num = -INFINITY;
-    if (ans.size() != 0 && nums[i] > ans[ans.size() - 1]) {
-      ans.push_back(nums[i]);
-      break;
-    }
-    for (int j = i; j < i + k; ++j) {
-      max_num = max(max_num, nums[j]);
-    }
-    ans.push_back(max_num);
-  }
-  return ans;
-}
-
-
+/**
+ * Your CQueue object will be instantiated and called as such:
+ * CQueue* obj = new CQueue();
+ * obj->appendTail(value);
+ * int param_2 = obj->deleteHead();
+ */
 
 int main(int argc, char **argv) {
-  vector<int> nums = {1, 3, -1, -3, 5, 3, 6, 7};
-  int k = 3;
-  vector<int> ans = maxSlideWindow(nums, k);
-  for (int i = 0; i < ans.size(); ++i) {
-    cout << ans[i] << " ";
-  }
+  Solution s;
+  vector<int> pushed = {2, 3, 1, 0, 2, 5, 3};
+  cout << s.findRepeatNumber(pushed) << endl;
   return 0;
 }
