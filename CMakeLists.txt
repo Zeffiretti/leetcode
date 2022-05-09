@@ -23,4 +23,6 @@ add_library(Algorithm ${alg_file})
 add_executable(leetcode ${main_file})
 add_executable(test_node src/alitest.cpp)
 add_executable(alg_test src/000test.cpp)
+
+add_executable(contest src/contest.cpp)
 # target_link_libraries(test_node myAlgorithm)
