@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "name": "leetcode",
+      "path": "."
+    },
+  ],
+  "settings": {
+    "C_Cpp.default.compileCommands": "buils/compile_commands.json",
+    "editor.autoIndent": "advanced",
+    "editor.formatOnSave": true,
+    "editor.indentSize": 2,
+    "files.associations": {
+      "vector": "cpp",
+      "xstring": "cpp"
+    },
+  }
+}

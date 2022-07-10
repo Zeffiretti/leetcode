@@ -1,0 +1,82 @@
+---
+# See also:
+#   https://source.chromium.org/chromium/chromium/src/+/main:.clang-tidy
+#   https://github.com/googleapis/google-cloud-cpp/blob/main/.clang-tidy
+#
+# -bugprone-narrowing-conversions:
+#   False positives with size_t.
+# -google-readability-braces-around-statements:
+# -readability-braces-around-statements:
+#   Google coding style does not require this.
+# -modernize-avoid-c-arrays:
+#   It has legitimate uses.
+# -modernize-deprecated-headers:
+#   False positives with time.h.
+# -modernize-pass-by-value:
+#   TODO(lxiang): Evalute if we need this.
+# -modernize-return-braced-init-list:
+#   Google thinks this hurts readability by omitting type information.
+# -modernize-use-trailing-return-type:
+#   Hurts readability.
+# -performance-move-const-arg:
+#   Too much unnecessary implementation details.
+# -readability-function-cognitive-complexity:
+#   Clang 12 adds code expanded from macros to this.
+#   TODO(lxiang): Consider turning this back on once we have Clang 13+.
+# -readability-magic-numbers:
+#   Too many false positives.
+Checks: >
+  -*,
+  bugprone-*,
+  google-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  readability-*
+  clang-analyzer-core.uninitialized.CapturedBlockVariable,
+  clang-analyzer-cplusplus.InnerPointer,
+  clang-analyzer-nullability.NullableReturnedFromNonnull,
+  -bugprone-narrowing-conversions,
+  -google-readability-braces-around-statements,
+  -modernize-avoid-c-arrays,
+  -modernize-deprecated-headers,
+  -modernize-pass-by-value,
+  -modernize-return-braced-init-list,
+  -modernize-use-trailing-return-type,
+  -performance-move-const-arg,
+  -readability-braces-around-statements,
+  -readability-function-cognitive-complexity,
+  -readability-magic-numbers,
+CheckOptions:
+  - key: bugprone-dangling-handle.HandleClasses
+    value: ::std::basic_string_view;::std::span
+  - key: bugprone-string-constructor.StringNames
+    value: ::std::basic_string;::std::basic_string_view
+  - key: modernize-use-default-member-init.UseAssignment
+    value: 1
+  # Relaxes this check. See https://groups.google.com/a/chromium.org/g/cxx/c/noMMTNYiM0w.
+  - key: modernize-use-emplace.IgnoreImplicitConstructors
+    value: 1
+  - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
+  - { key: readability-identifier-naming.ClassCase,              value: CamelCase  }
+  - { key: readability-identifier-naming.StructCase,             value: CamelCase  }
+  - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
+  - { key: readability-identifier-naming.FunctionCase,           value: aNy_CasE  }
+  - { key: readability-identifier-naming.VariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.ClassMemberCase,        value: lower_case }
+  - { key: readability-identifier-naming.ClassMemberSuffix,      value: _          }
+  - { key: readability-identifier-naming.PrivateMemberSuffix,    value: _          }
+  - { key: readability-identifier-naming.ProtectedMemberSuffix,  value: _          }
+  - { key: readability-identifier-naming.EnumConstantCase,         value: CamelCase }
+  - { key: readability-identifier-naming.EnumConstantPrefix,       value: k         }
+  - { key: readability-identifier-naming.ConstexprVariableCase,    value: CamelCase }
+  - { key: readability-identifier-naming.ConstexprVariablePrefix,  value: k         }
+  - { key: readability-identifier-naming.GlobalConstantCase,       value: CamelCase }
+  - { key: readability-identifier-naming.GlobalConstantPrefix,     value: k         }
+  - { key: readability-identifier-naming.MemberConstantCase,       value: CamelCase }
+  - { key: readability-identifier-naming.MemberConstantPrefix,     value: k         }
+  - { key: readability-identifier-naming.StaticConstantCase,       value: CamelCase }
+  - { key: readability-identifier-naming.StaticConstantPrefix,     value: k         }
+  - { key: readability-implicit-bool-conversion.AllowIntegerConditions,  value: 1   }
+  - { key: readability-implicit-bool-conversion.AllowPointerConditions,  value: 1   }
+
