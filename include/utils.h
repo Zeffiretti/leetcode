@@ -9,6 +9,10 @@
 #include <unordered_set>
 #include <set>
 #include <string>
+#include <deque>
+#include <queue>
+#include <list>
+#include <iterator>
 using namespace std;
 
 struct ListNode {
@@ -36,27 +40,48 @@ class Node {
   Node *right;
   Node *next;
   Node *random;
+  vector<Node *> neighbors;
 
   Node() :
     val(0),
     left(NULL),
     right(NULL),
     next(NULL),
-    random(NULL) {}
+    random(NULL) {
+    neighbors = vector<Node *>();
+  }
 
   Node(int _val) :
     val(_val),
     left(NULL),
     right(NULL),
     next(NULL),
-    random(NULL) {}
+    random(NULL) {
+    neighbors = vector<Node *>();
+  }
 
   Node(int _val, Node *_left, Node *_right, Node *_next)
     : val(_val),
       left(_left),
       right(_right),
       next(_next),
-      random(NULL) {}
+      random(NULL) {
+    neighbors = vector<Node *>();
+  }
+
+  Node(int _val, Node *_left, Node *_right, Node *_next, vector<Node *> _neighbors)
+    : val(_val),
+      left(_left),
+      right(_right),
+      next(_next),
+      random(NULL) {
+    neighbors = _neighbors;
+  }
+
+  Node(int _val, vector<Node *> _neighbors) {
+    val = _val;
+    neighbors = _neighbors;
+  }
 };
 
 #endif

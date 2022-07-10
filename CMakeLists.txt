@@ -14,7 +14,7 @@ endif()
 
 include_directories(include)
 
-set(Pro_Num 93)
+set(Pro_Num 934)
 file(GLOB_RECURSE main_file src/${Pro_Num}.*.cpp)
 file(GLOB_RECURSE sol_file src/lceditor/*.cpp)
 file(GLOB_RECURSE alg_file src/data-structure/*.cpp)
@@ -23,6 +23,7 @@ add_library(Algorithm ${alg_file})
 add_executable(leetcode ${main_file})
 add_executable(test_node src/alitest.cpp)
 add_executable(alg_test src/000test.cpp)
+add_executable(jobs_node src/jobs.cpp)
 
 add_executable(contest src/contest.cpp)
 # target_link_libraries(test_node myAlgorithm)
