@@ -27,26 +27,19 @@ class Solution {
  public:
   Node *connect(Node *root) {
     if (!root) return nullptr;
-    vector<Node *> nodes;
-    nodes.push_back(root);
-    while (!nodes.empty()) {
-      int size = nodes.size();
-      vector<Node *> next_nodes;
-      for (int i = 0; i < size - 1; ++i) {
-        // cout << nodes[i]->val << " -> ";
-        nodes[i]->next = nodes[i + 1];
-        if (nodes[i]->left)
-          next_nodes.push_back(nodes[i]->left);
-        if (nodes[i]->right)
-          next_nodes.push_back(nodes[i]->right);
+    Node *cur = root;
+    vector<Node *> cur_level;
+    cur_level.push_back(cur);
+    while (!cur_level.empty()) {
+      vector<Node *> next_level;
+      for (int i = 0; i < cur_level.size(); i++) {
+        if (i < cur_level.size() - 1) {
+          cur_level[i]->next = cur_level[i + 1];
+        }
+        if (cur_level[i]->left) next_level.push_back(cur_level[i]->left);
+        if (cur_level[i]->right) next_level.push_back(cur_level[i]->right);
       }
-      // cout << nodes[size - 1]->val << endl;
-      nodes[size - 1]->next = nullptr;
-      if (nodes[size - 1]->left)
-        next_nodes.push_back(nodes[size - 1]->left);
-      if (nodes[size - 1]->right)
-        next_nodes.push_back(nodes[size - 1]->right);
-      nodes = next_nodes;
+      cur_level = next_level;
     }
     return root;
   }

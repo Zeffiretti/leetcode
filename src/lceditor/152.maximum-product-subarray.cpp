@@ -8,15 +8,16 @@
 class Solution {
  public:
   int maxProduct(vector<int> &nums) {
-    int n = nums.size(), res = nums[0], l = 1, r = 1;
-    for (int i = 0; i < n; i++) {
-      l =  (l) * nums[i];
-      r =  (r) * nums[n - 1 - i];
-      res = max(res, max(l, r));
-      if (l == 0)l = 1;
-      if (r == 0)r = 1;
+    int result = nums[0];
+    int f_min = nums[0];
+    int f_max = nums[0];
+    for (int i = 1; i < nums.size(); ++i) {
+      int fn = f_min, fm = f_max;
+      f_min = min(min(fn * nums[i], fm * nums[i]), nums[i]);
+      f_max = max(max(fn * nums[i], fm * nums[i]), nums[i]);
+      result = max(result, f_max);
     }
-    return res;
+    return result;
   }
 };
 // @lc code=end

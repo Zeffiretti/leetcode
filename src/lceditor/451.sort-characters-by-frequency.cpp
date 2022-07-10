@@ -13,24 +13,21 @@ using namespace std;
 class Solution {
  public:
   string frequencySort(string s) {
-    unordered_map<char, int> freq;
-    vector<string> bucket(s.size() + 1, "");
-    string res;
-
-    //count frequency of each character
-    for (char c : s) freq[c]++;
-    //put character into frequency bucket
-    for (auto &it : freq) {
-      int n = it.second;
-      char c = it.first;
-      bucket[n].append(n, c);
+    vector<vector<int>> freqs(256, vector<int>(2, 0));
+    for (char c : s) {
+      freqs[c][0]++;
+      freqs[c][1] = c;
     }
-    //form descending sorted string
-    for (int i = s.size(); i > 0; i--) {
-      if (!bucket[i].empty())
-        res.append(bucket[i]);
+    sort(freqs.begin(), freqs.end(), [](const vector<int> &a, const vector<int> &b) {
+      return a[0] > b[0];
+    });
+    string ans;
+    for (auto &freq : freqs) {
+      for (int i = 0; i < freq[0]; i++) {
+        ans += freq[1];
+      }
     }
-    return res;
+    return ans;
   }
 };
 // @lc code=end

@@ -20,11 +20,12 @@ class Solution {
  public:
   ListNode *removeElements(ListNode *head, int val) {
     ListNode *dummy = new ListNode(-1, head), *prev = dummy;
-    for (; head; head = head -> next)
+    for (; head; head = head -> next) {
       if (head -> val != val)
         prev = head;
       else
         prev -> next = head -> next;
+    }
     return dummy -> next;
   }
 };
