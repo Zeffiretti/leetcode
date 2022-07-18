@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<int> productExceptSelf(vector<int> &nums) {
+  vector<int> productExceptSelf(vector<int>& nums) {
     // int len = nums.size();//[1234]
     vector<int> res(nums.size(), 1);
     int left = 1;
@@ -22,4 +22,3 @@ class Solution {
   }
 };
 // @lc code=end
-
