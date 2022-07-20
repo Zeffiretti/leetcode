@@ -30,10 +30,11 @@ int main(int argc, char const* argv[]) {
       eat--;
     }
     res[i] -= eat;
+    res[i] = max(res[i], 0);
   }
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n - 1; ++i) {
     cout << res[i] << " ";
   }
-  cout << endl;
+  cout << res[n - 1] << endl;
   return 0;
 }
