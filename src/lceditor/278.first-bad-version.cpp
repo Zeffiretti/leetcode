@@ -4,9 +4,7 @@
  * [278] First Bad Version
  */
 #include "utils.h"
-bool isBadVersion(int version) {
-  return true;
-}
+bool isBadVersion(int version);
 // @lc code=start
 // The API isBadVersion is defined for you.
 // bool isBadVersion(int version);
@@ -27,4 +25,3 @@ class Solution {
   }
 };
 // @lc code=end
-
