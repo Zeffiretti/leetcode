@@ -18,3 +18,7 @@ build/
 
 # clion user settings
 .idea/
+
+# cache files
+*.cache
+.cache/
