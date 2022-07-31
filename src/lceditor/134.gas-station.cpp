@@ -3,11 +3,11 @@
  *
  * [134] Gas Station
  */
-#inclyde "utils.h"
+#include "utils.h"
 // @lc code=start
 class Solution {
  public:
-  int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
+  int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
     int start = gas.size() - 1;
     int end = 0;
     int sum = gas[start] - cost[start];
@@ -24,4 +24,3 @@ class Solution {
   }
 };
 // @lc code=end
-

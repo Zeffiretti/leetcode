@@ -3,7 +3,7 @@
  *
  * [91] Decode Ways
  */
-
+#include "utils.h"
 // @lc code=start
 class Solution {
  public:
@@ -34,4 +34,3 @@ class Solution {
   }
 };
 // @lc code=end
-

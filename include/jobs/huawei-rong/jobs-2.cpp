@@ -4,8 +4,11 @@
 #include <vector>
 
 using namespace std;
+#define UNUSED(x) (void)(x)
 
 int main(int argc, char const* argv[]) {
+  UNUSED(argc);
+  UNUSED(argv);
   int n;
   cin >> n;
   vector<int> f(n + 1);

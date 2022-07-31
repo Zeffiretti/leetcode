@@ -3,13 +3,13 @@
  *
  * [59] Spiral Matrix II
  */
-
+#include "utils.h"
 // @lc code=start
 class Solution {
  public:
   vector<vector<int>> generateMatrix(int n) {
     vector<vector<int>> res(n, vector<int>(n, 0));
-    int px[] = {0, 1, 0, -1};//right, down, left, up
+    int px[] = {0, 1, 0, -1};  // right, down, left, up
     int py[] = {1, 0, -1, 0};
     int x = 0, y = 0, d = 0;
     int num = 1;
@@ -29,4 +29,3 @@ class Solution {
   }
 };
 // @lc code=end
-

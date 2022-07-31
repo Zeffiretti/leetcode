@@ -3,11 +3,11 @@
  *
  * [14] Longest Common Prefix
  */
-
+#include "utils.h"
 // @lc code=start
 class Solution {
  public:
-  string longestCommonPrefix(vector<string> &strs) {
+  string longestCommonPrefix(vector<string>& strs) {
     string res = strs[0];
     for (int i = 1; i < strs.size(); i++) {
       string tmp = strs[i];
@@ -26,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

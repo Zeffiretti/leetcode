@@ -1,12 +1,12 @@
-#include <cstdio>
-#include <iostream>
-#include <string>
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
 #include <ctime>
-#include <vector>
-#include <unordered_map>
+#include <iostream>
 #include <string>
+#include <unordered_map>
+#include <vector>
+
 using namespace std;
 vector<int> max_values;
 vector<int> used;
@@ -35,12 +35,8 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
   return res;
 }
 
-
-
-
-
 //  Non-editable part
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   int project_num;
   cin >> project_num;
   vector<int> human_resources(3);

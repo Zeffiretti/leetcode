@@ -3,7 +3,7 @@
  *
  * [1290] Convert Binary Number in a Linked List to Integer
  */
-
+#include "utils.h"
 // @lc code=start
 /**
  * Definition for singly-linked list.
@@ -17,10 +17,10 @@
  */
 class Solution {
  public:
-  int getDecimalValue(ListNode *head) {
+  int getDecimalValue(ListNode* head) {
     int res = 0;
-    ListNode *iter = head;
-    while (iter != NULL) {
+    ListNode* iter = head;
+    while (iter != nullptr) {
       res <<= 1;
       res |= iter->val;
       iter = iter->next;
@@ -29,4 +29,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -1,7 +1,8 @@
 // @before-stub-for-debug-begin
-#include <vector>
 #include <string>
-#include "commoncppproblem25.h"
+#include <vector>
+
+// #include "commoncppproblem25.h"
 
 using namespace std;
 // @before-stub-for-debug-end
@@ -25,12 +26,12 @@ using namespace std;
  */
 class Solution {
  public:
-  ListNode *reverseKGroup(ListNode *head, int k) {
+  ListNode* reverseKGroup(ListNode* head, int k) {
     if (head == nullptr || head->next == nullptr || k == 1) {
       return head;
     }
-    ListNode *cur_head = head;
-    ListNode *cur_tail = cur_head;
+    ListNode* cur_head = head;
+    ListNode* cur_tail = cur_head;
     int cnt = 1;
     while (cnt < k) {
       if (!cur_tail) {
@@ -42,11 +43,11 @@ class Solution {
     if (!cur_tail) {
       return head;
     }
-    ListNode *next_head = cur_tail->next;
-    ListNode *pre = cur_head;
-    ListNode *cur = pre->next;
+    ListNode* next_head = cur_tail->next;
+    ListNode* pre = cur_head;
+    ListNode* cur = pre->next;
     while (cur && cur != next_head) {
-      ListNode *tmp = cur->next;
+      ListNode* tmp = cur->next;
       cur->next = pre;
       pre = cur;
       cur = tmp;
@@ -56,4 +57,3 @@ class Solution {
   }
 };
 // @lc code=end
-

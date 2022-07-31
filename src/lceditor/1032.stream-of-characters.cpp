@@ -26,9 +26,12 @@ class StreamChecker {
   bool query(char c) {
     queryStream.push_front(c);
     if (size(queryStream) > L) queryStream.pop_back();
-    for (long hash = 0, p_pow = 1; auto c : queryStream)
-      if (!suffixHash.count(rollingHash(hash, p_pow, c))) return false;
-      else if (wordHash.count(hash)) return true;
+    for(int i = 0; i < size(queryStream); i++) {
+      long hash = 0, p_pow = 1;
+      for (int j = i; j < size(queryStream); j++)
+        hash = rollingHash(hash, p_pow, queryStream[j]);
+      if (wordHash.count(hash)) return true;
+    }
     return false;
   }
 };

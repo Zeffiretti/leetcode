@@ -1,5 +1,6 @@
 #ifndef __UTILS_H_
 #define __UTILS_H_
+#include <bits/stdc++.h>
 #include <algorithm>
 #include <cmath>
 #include <deque>

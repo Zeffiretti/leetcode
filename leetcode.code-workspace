@@ -6,7 +6,10 @@
     },
   ],
   "settings": {
-    "C_Cpp.default.compileCommands": "buils/compile_commands.json",
+    "C_Cpp.default.compileCommands": "build/compile_commands.json",
+    "clangd.arguments": [
+      "--compile-commands-dir=./build"
+    ],
     "editor.autoIndent": "advanced",
     "editor.formatOnSave": true,
     "editor.indentSize": 2,
@@ -14,5 +17,6 @@
       "vector": "cpp",
       "xstring": "cpp"
     },
+    "ros.distro": "melodic",
   }
 }
