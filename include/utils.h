@@ -1,11 +1,12 @@
-#ifndef __UTILS_H_
-#define __UTILS_H_
-#include <bits/stdc++.h>
+#ifndef INCLUDE_UTILS_H
+#define INCLUDE_UTILS_H
+
 #include <algorithm>
 #include <cmath>
 #include <deque>
 #include <iostream>
 #include <iterator>
+#include <limits>
 #include <list>
 #include <map>
 #include <numeric>
@@ -17,7 +18,16 @@
 #include <unordered_set>
 #include <vector>
 
+
 using namespace std;
+
+#ifndef INT_MIN
+#  define INT_MIN INT32_MIN
+#endif
+
+#ifndef INT_MAX
+#  define INT_MAX INT32_MAX
+#endif
 
 struct ListNode {
   int val;

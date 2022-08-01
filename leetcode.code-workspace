@@ -8,7 +8,7 @@
   "settings": {
     "C_Cpp.default.compileCommands": "build/compile_commands.json",
     "clangd.arguments": [
-      "--compile-commands-dir=./build"
+      "--compile-commands-dir=build",
     ],
     "editor.autoIndent": "advanced",
     "editor.formatOnSave": true,
@@ -17,6 +17,5 @@
       "vector": "cpp",
       "xstring": "cpp"
     },
-    "ros.distro": "melodic",
   }
 }

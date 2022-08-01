@@ -18,7 +18,7 @@
  */
 class Solution {
  public:
-  int minDepth(TreeNode *root) {
+  int minDepth(TreeNode* root) {
     if (!root) return 0;
     if (!root->left && !root->right) return 1;
     if (root->left && root->right) {
@@ -27,9 +27,7 @@ class Solution {
       return minDepth(root->left) + 1;
     } else {
       return minDepth(root->right) + 1;
-
     }
   }
 };
 // @lc code=end
-
