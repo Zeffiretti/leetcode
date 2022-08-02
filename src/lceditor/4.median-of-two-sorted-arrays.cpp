@@ -74,7 +74,7 @@ using namespace std;
 // };
 class Solution {
  public:
-  double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
+  double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     int n1 = nums1.size(), n2 = nums2.size();
     int mIdx = (n1 + n2) / 2 - 1;
     int i = -1, j = -1, last = 0, current = 0;
@@ -108,4 +108,3 @@ int main(void) {
   b.push_back(3);
   std::cout << s.findMedianSortedArrays(a, b);
 }
-
