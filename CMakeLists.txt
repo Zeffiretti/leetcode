@@ -4,7 +4,10 @@ project(leetcode)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_EXPORT_COMPILECOMMANDS ON)
 
+set(LC_INCLUDE_DIR ${CMAKE_SOURCE_DIR})
+
 add_subdirectory(lib/myalgorithm)
+add_subdirectory(jobs)
 
 if(myAlgorithm_FOUND)
     include_directories(${myAlgorithm_INCLUDE_DIRS})
