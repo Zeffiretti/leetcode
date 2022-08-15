@@ -1,8 +1,16 @@
 {
   "folders": [
     {
-      "name": "leetcode",
+      "name": "root",
       "path": "."
+    },
+    {
+      "name": "lcworkspace",
+      "path": "./lc-us/problems"
+    },
+    {
+      "name": "jobs",
+      "path": "./jobs"
     },
   ],
   "settings": {
@@ -12,7 +20,6 @@
     ],
     "editor.autoIndent": "advanced",
     "editor.formatOnSave": true,
-    "editor.indentSize": 2,
     "files.associations": {
       "vector": "cpp",
       "xstring": "cpp"
