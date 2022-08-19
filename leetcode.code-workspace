@@ -3,15 +3,7 @@
     {
       "name": "root",
       "path": "."
-    },
-    {
-      "name": "lcworkspace",
-      "path": "./lc-us/problems"
-    },
-    {
-      "name": "jobs",
-      "path": "./jobs"
-    },
+    }
   ],
   "settings": {
     "C_Cpp.default.compileCommands": "build/compile_commands.json",

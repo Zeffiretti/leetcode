@@ -18,7 +18,6 @@
 #include <unordered_set>
 #include <vector>
 
-
 using namespace std;
 
 #ifndef INT_MIN
@@ -43,8 +42,8 @@ struct TreeNode {
   TreeNode* left;
   TreeNode* right;
   TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+  explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+  TreeNode(int x, TreeNode* left_, TreeNode* right_) : val(x), left(left_), right(right_) {}
 };
 
 class Node {

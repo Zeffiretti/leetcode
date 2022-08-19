@@ -10,6 +10,7 @@ add_library(${PROJECT_NAME}_LIB STATIC
   validtuples.h
   poker.h
   maxsumbinarytree.h
+  interview.h
 )
 
 target_include_directories(${PROJECT_NAME}_LIB PRIVATE
