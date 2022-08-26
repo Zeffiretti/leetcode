@@ -8,6 +8,9 @@ add_library(${PROJECT_NAME}_LIB STATIC
   reducepollution.h
   fractionsum.h
   rehabitalition.h
+  consubstr.h
+  alignedset.h
+  mergearray.h
 )
 target_include_directories(${PROJECT_NAME}_LIB PRIVATE
   ${LC_INCLUDE_DIR}
