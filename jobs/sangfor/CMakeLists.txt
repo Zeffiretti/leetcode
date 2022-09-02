@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(base)
+project(sangfor)
 
 add_executable(${PROJECT_NAME}_NODE main.cc)
 
