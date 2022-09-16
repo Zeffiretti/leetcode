@@ -47,6 +47,12 @@ Checks: >
   -readability-braces-around-statements,
   -readability-function-cognitive-complexity,
   -readability-magic-numbers,
+  -bugprone-easily-swappable-parameters,
+  -misc-no-recursion,
+  -misc-definitions-in-headers,
+  -google-explicit-constructor,
+  -misc-non-private-member-variables-in-classes,
+  -google-runtime-int,
 CheckOptions:
   - key: bugprone-dangling-handle.HandleClasses
     value: ::std::basic_string_view;::std::span
