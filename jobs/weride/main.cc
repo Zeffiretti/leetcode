@@ -11,7 +11,7 @@
 int main(int argc, char** argv) {
   std::vector<ll> steps;
   ll n;
-  while (scanf("%d", &n) != EOF) {
+  while (scanf("%lld", &n) != EOF) {
     steps.emplace_back(n);
     if (std::cin.get() == ',') {
       continue;
