@@ -31,13 +31,10 @@ class MinStack {
     min_vals.pop_back();
   }
 
-  int top() {
-    return data.back();
-  }
+  int top() { return data.back(); }
 
-  int getMin() {
-    return min_vals.back();
-  }
+  int getMin() { return min_vals.back(); }
+
  private:
   vector<int> data;
   vector<int> min_vals;
@@ -52,4 +49,3 @@ class MinStack {
  * int param_4 = obj->getMin();
  */
 // @lc code=end
-

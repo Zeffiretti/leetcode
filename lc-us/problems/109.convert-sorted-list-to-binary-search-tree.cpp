@@ -28,15 +28,15 @@
  */
 class Solution {
  public:
-  TreeNode *sortedListToBST(ListNode *head) {
+  TreeNode* sortedListToBST(ListNode* head) {
     if (!head) return nullptr;
     if (!head->next) return new TreeNode(head->val);
     if (!head->next->next) {
-      TreeNode *root = new TreeNode(head->val);
+      TreeNode* root = new TreeNode(head->val);
       root->right = new TreeNode(head->next->val);
       return root;
     }
-    ListNode *dummy = new ListNode(0);
+    ListNode* dummy = new ListNode(0);
     dummy->next = head;
     ListNode *slow = head, *fast = head;
     while (fast->next && fast->next->next) {
@@ -44,8 +44,8 @@ class Solution {
       slow = slow->next;
       fast = fast->next->next;
     }
-    TreeNode *root = new TreeNode(slow->val);
-    ListNode *right = slow->next;
+    TreeNode* root = new TreeNode(slow->val);
+    ListNode* right = slow->next;
     dummy->next = nullptr;
     root->left = sortedListToBST(head);
     root->right = sortedListToBST(right);
@@ -53,4 +53,3 @@ class Solution {
   }
 };
 // @lc code=end
-

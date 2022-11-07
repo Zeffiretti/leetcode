@@ -14,7 +14,7 @@ class Solution {
     dfs(s, 0, tmp, res, 0);
     return res;
   }
-  void dfs(string &s, int start, string &cur, vector<string> &res, int dots) {
+  void dfs(string& s, int start, string& cur, vector<string>& res, int dots) {
     if (dots == 4) {
       // cout << "cur is " << cur << endl;
       if (cur.size() == s.size() + 3 && isValidIP(cur)) {
@@ -35,7 +35,7 @@ class Solution {
       dfs(s, i + 1, tmp, res, dots + 1);
     }
   }
-  bool isValidIP(string &s) {
+  bool isValidIP(string& s) {
     // split s with '.'
     vector<string> parts;
     string tmp;
@@ -72,7 +72,6 @@ class Solution {
   }
 };
 // @lc code=end
-
 
 // main function
 int main() {

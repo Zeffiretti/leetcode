@@ -18,13 +18,13 @@
  */
 class Solution {
  public:
-  vector<vector<int>> pathSum(TreeNode *root, int targetSum) {
+  vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
     vector<vector<int>> res;
     vector<int> path;
     dfs(root, targetSum, path, res);
     return res;
   }
-  void dfs(TreeNode *root, int targetSum, vector<int> &path, vector<vector<int>> &res) {
+  void dfs(TreeNode* root, int targetSum, vector<int>& path, vector<vector<int>>& res) {
     if (!root) return;
     path.push_back(root->val);
     if (!root->left && !root->right && targetSum == root->val) {
@@ -36,4 +36,3 @@ class Solution {
   }
 };
 // @lc code=end
-

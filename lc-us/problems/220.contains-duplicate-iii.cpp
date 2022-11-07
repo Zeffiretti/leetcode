@@ -8,7 +8,7 @@
 class Solution {
  public:
 #define ll long long
-  bool containsNearbyAlmostDuplicate(vector<int> &nums, int k, int t) {
+  bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
     if (nums.size() == 1) {
       return false;
     }
@@ -22,12 +22,10 @@ class Solution {
       if (buckets.find(bucket) != buckets.end()) {
         return true;
       }
-      if (buckets.find(bucket - 1) != buckets.end() &&
-          abs(nums[i] - buckets[bucket - 1]) <= t) {
+      if (buckets.find(bucket - 1) != buckets.end() && abs(nums[i] - buckets[bucket - 1]) <= t) {
         return true;
       }
-      if (buckets.find(bucket + 1) != buckets.end() &&
-          abs(nums[i] - buckets[bucket + 1]) <= t) {
+      if (buckets.find(bucket + 1) != buckets.end() && abs(nums[i] - buckets[bucket + 1]) <= t) {
         return true;
       }
       buckets[bucket] = nums[i];
@@ -39,4 +37,3 @@ class Solution {
   }
 };
 // @lc code=end
-

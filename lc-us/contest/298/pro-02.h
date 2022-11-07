@@ -1,8 +1,8 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
 #include <iostream>
 #include <string>
-#include <stdio.h>
+#include <vector>
 using namespace std;
 
 #include <stdio.h>
@@ -21,13 +21,12 @@ class Solution {
       }
     }
     int res = -1;
-    //The units digit of a number is the rightmost digit of the number.
+    // The units digit of a number is the rightmost digit of the number.
     int digit = num % 10;
     if (digit == k) {
       return 1;
     }
     while (digit != k) {
-
     }
   }
 };

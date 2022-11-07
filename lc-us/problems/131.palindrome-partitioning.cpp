@@ -13,7 +13,7 @@ class Solution {
     dfs(s, 0, path, res);
     return res;
   }
-  void dfs(string &s, int start, vector<string> &path, vector<vector<string>> &res) {
+  void dfs(string& s, int start, vector<string>& path, vector<vector<string>>& res) {
     if (start == s.size()) {
       res.push_back(path);
       return;
@@ -26,7 +26,7 @@ class Solution {
       }
     }
   }
-  bool isPalindrome(string &s, int start, int end) {
+  bool isPalindrome(string& s, int start, int end) {
     while (start < end) {
       if (s[start++] != s[end--]) return false;
     }
@@ -34,4 +34,3 @@ class Solution {
   }
 };
 // @lc code=end
-

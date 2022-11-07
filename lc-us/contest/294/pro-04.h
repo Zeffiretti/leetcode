@@ -1,17 +1,17 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
+#include <iostream>
 #include <iterator>
 #include <list>
 #include <map>
 #include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int totalStrength(vector<int> &strength) {
+  int totalStrength(vector<int>& strength) {
     int res = 0;
     for (int i = 1; i <= strength.size(); ++i) {
       cout << "i: " << i << endl;

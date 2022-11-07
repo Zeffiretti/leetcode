@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int robUtil(vector<int> &nums, int start, int end) {
+  int robUtil(vector<int>& nums, int start, int end) {
     if (end - start <= 0) return nums[start];
     if (end - start == 1) return max(nums[start], nums[end]);
     vector<int> dp(end - start + 1, 0);
@@ -18,7 +18,7 @@ class Solution {
     }
     return dp[end - start];
   }
-  int rob(vector<int> &nums) {
+  int rob(vector<int>& nums) {
     int n = nums.size();
     if (n == 0) {
       return 0;
@@ -31,4 +31,3 @@ class Solution {
   }
 };
 // @lc code=end
-

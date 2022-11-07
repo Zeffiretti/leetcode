@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int minimumTotal(vector<vector<int>> &triangle) {
+  int minimumTotal(vector<vector<int>>& triangle) {
     int n = triangle.size();
     if (n == 0) return 0;
     vector<vector<int>> dp(n, vector<int>(n, 0));
@@ -27,4 +27,3 @@ class Solution {
   }
 };
 // @lc code=end
-

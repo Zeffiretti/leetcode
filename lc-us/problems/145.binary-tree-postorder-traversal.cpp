@@ -18,7 +18,7 @@
  */
 class Solution {
  public:
-  vector<int> postorderTraversal(TreeNode *root) {
+  vector<int> postorderTraversal(TreeNode* root) {
     vector<int> res;
     if (root == nullptr) {
       return res;
@@ -27,7 +27,7 @@ class Solution {
     return res;
   }
 
-  void postorder(TreeNode *root, vector<int> &res) {
+  void postorder(TreeNode* root, vector<int>& res) {
     if (root == nullptr) {
       return;
     }
@@ -37,4 +37,3 @@ class Solution {
   }
 };
 // @lc code=end
-

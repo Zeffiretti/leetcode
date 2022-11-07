@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int search(vector<int> &nums, int target) {
+  int search(vector<int>& nums, int target) {
     int lo = 0, hi = nums.size();
     while (lo < hi) {
       int mid = (lo + hi) / 2;
@@ -39,4 +39,3 @@ class Solution {
   }
 };
 // @lc code=end
-

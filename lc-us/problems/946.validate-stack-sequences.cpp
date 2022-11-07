@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  bool validateStackSequences(vector<int> &pushed, vector<int> &popped) {
+  bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
     stack<int> s;
     for (int i = 0, j = 0; i < pushed.size(); ++i) {
       s.push(pushed[i]);
@@ -20,4 +20,3 @@ class Solution {
   }
 };
 // @lc code=end
-

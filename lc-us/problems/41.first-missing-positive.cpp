@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int firstMissingPositive(vector<int> &nums) {
+  int firstMissingPositive(vector<int>& nums) {
     int i = 0;
     while (i < nums.size()) {
       if (nums[i] >= 1 && nums[i] <= nums.size() && nums[i] != i + 1) {
@@ -29,4 +29,3 @@ class Solution {
   }
 };
 // @lc code=end
-

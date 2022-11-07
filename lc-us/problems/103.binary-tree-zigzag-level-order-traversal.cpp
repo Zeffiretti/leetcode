@@ -18,15 +18,15 @@
  */
 class Solution {
  public:
-  vector<vector<int>> zigzagLevelOrder(TreeNode *root) {
+  vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
     vector<vector<int>> res;
     if (!root) return res;
-    vector<TreeNode *> level;
+    vector<TreeNode*> level;
     level.push_back(root);
     bool is_reverse = false;
     while (!level.empty()) {
       vector<int> cur;
-      vector<TreeNode *> next;
+      vector<TreeNode*> next;
       for (int i = 0; i != level.size(); i++) {
         cur.push_back(level[i]->val);
         if (level[i]->left) next.push_back(level[i]->left);
@@ -41,4 +41,3 @@ class Solution {
   }
 };
 // @lc code=end
-

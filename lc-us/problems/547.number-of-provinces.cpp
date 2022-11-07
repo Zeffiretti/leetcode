@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int findCircleNum(vector<vector<int>> &isConnected) {
+  int findCircleNum(vector<vector<int>>& isConnected) {
     int m = isConnected.size();
     int n = isConnected[0].size();
     int res = 0;
@@ -21,7 +21,7 @@ class Solution {
     }
     return res;
   }
-  void bfs(vector<vector<int>> &isConnected, int i, int j) {
+  void bfs(vector<vector<int>>& isConnected, int i, int j) {
     if (i < 0 || i >= isConnected.size() || j < 0 || j >= isConnected[0].size()) return;
     if (isConnected[i][j] == 0) return;
     isConnected[i][j] = 0;
@@ -31,4 +31,3 @@ class Solution {
   }
 };
 // @lc code=end
-

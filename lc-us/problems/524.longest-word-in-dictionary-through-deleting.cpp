@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  string findLongestWord(string s, vector<string> &dictionary) {
+  string findLongestWord(string s, vector<string>& dictionary) {
     vector<string> tmp_dict = dictionary;
     for (auto c : s) {
       for (int i = 0; i < tmp_dict.size(); i++) {
@@ -30,4 +30,3 @@ class Solution {
   }
 };
 // @lc code=end
-

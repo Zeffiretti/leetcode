@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> merge(vector<vector<int>> &intervals) {
+  vector<vector<int>> merge(vector<vector<int>>& intervals) {
     vector<vector<int>> res;
     if (intervals.empty()) return res;
     sort(intervals.begin(), intervals.end());
@@ -25,4 +25,3 @@ class Solution {
   }
 };
 // @lc code=end
-

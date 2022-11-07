@@ -15,9 +15,9 @@
  */
 class Solution {
  public:
-  ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-    unordered_set<ListNode *> set;
-    ListNode *cur = headA;
+  ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+    unordered_set<ListNode*> set;
+    ListNode* cur = headA;
     while (cur) {
       set.insert(cur);
       cur = cur->next;
@@ -31,4 +31,3 @@ class Solution {
   }
 };
 // @lc code=end
-

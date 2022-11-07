@@ -7,10 +7,9 @@
 // @lc code=start
 class Solution {
  public:
-  int findMinArrowShots(vector<vector<int>> &points) {
-    sort(points.begin(), points.end(), [](vector<int> &a, vector<int> &b) {
-      return a[1] < b[1];
-    });// sort the intervals by the end time
+  int findMinArrowShots(vector<vector<int>>& points) {
+    sort(points.begin(), points.end(),
+         [](vector<int>& a, vector<int>& b) { return a[1] < b[1]; });  // sort the intervals by the end time
     int count = 1;
     int pre = points[0][1];
     for (int i = 1; i < points.size(); ++i) {
@@ -23,4 +22,3 @@ class Solution {
   }
 };
 // @lc code=end
-

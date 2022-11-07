@@ -13,8 +13,7 @@ class Solution {
     combine(res, cur, n, k, 1);
     return res;
   }
-  void combine(vector<vector<int>> &res, vector<int> &cur, int n, int k,
-               int start) {
+  void combine(vector<vector<int>>& res, vector<int>& cur, int n, int k, int start) {
     if (k == 0) {
       res.push_back(cur);
       return;
@@ -27,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -18,24 +18,24 @@
  */
 class Solution {
  public:
-  vector<TreeNode *> generateTrees(int n) {
+  vector<TreeNode*> generateTrees(int n) {
     if (n == 0) {
       return {};
     }
     return generateTrees(1, n);
   }
-  vector<TreeNode *> generateTrees(int start, int end) {
-    vector<TreeNode *> res;
+  vector<TreeNode*> generateTrees(int start, int end) {
+    vector<TreeNode*> res;
     if (start > end) {
       res.push_back(nullptr);
       return res;
     }
     for (int i = start; i <= end; i++) {
-      vector<TreeNode *> left_trees = generateTrees(start, i - 1);
-      vector<TreeNode *> right_trees = generateTrees(i + 1, end);
+      vector<TreeNode*> left_trees = generateTrees(start, i - 1);
+      vector<TreeNode*> right_trees = generateTrees(i + 1, end);
       for (auto left : left_trees) {
         for (auto right : right_trees) {
-          TreeNode *root = new TreeNode(i);
+          TreeNode* root = new TreeNode(i);
           root->left = left;
           root->right = right;
           res.push_back(root);
@@ -46,4 +46,3 @@ class Solution {
   }
 };
 // @lc code=end
-

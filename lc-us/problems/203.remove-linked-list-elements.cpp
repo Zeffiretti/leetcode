@@ -18,16 +18,15 @@
  */
 class Solution {
  public:
-  ListNode *removeElements(ListNode *head, int val) {
+  ListNode* removeElements(ListNode* head, int val) {
     ListNode *dummy = new ListNode(-1, head), *prev = dummy;
-    for (; head; head = head -> next) {
-      if (head -> val != val)
+    for (; head; head = head->next) {
+      if (head->val != val)
         prev = head;
       else
-        prev -> next = head -> next;
+        prev->next = head->next;
     }
-    return dummy -> next;
+    return dummy->next;
   }
 };
 // @lc code=end
-

@@ -1,12 +1,12 @@
-#include <vector>
 #include <algorithm>
 #include <iostream>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int maximumWhiteTiles(vector<vector<int>> &tiles, int carpetLen) {
+  int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {
     sort(tiles.begin(), tiles.end());
     int res = tiles[0][1] - tiles[0][0] + 1;
     if (res >= carpetLen) {

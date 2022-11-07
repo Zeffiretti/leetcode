@@ -23,10 +23,10 @@ public:
 
 class Solution {
  public:
-  Node *copyRandomList(Node *head) {
+  Node* copyRandomList(Node* head) {
     if (!head) return nullptr;
-    unordered_map<Node *, Node *> map;
-    Node *cur = head;
+    unordered_map<Node*, Node*> map;
+    Node* cur = head;
     while (cur) {
       map[cur] = new Node(cur->val);
       cur = cur->next;
@@ -41,4 +41,3 @@ class Solution {
   }
 };
 // @lc code=end
-

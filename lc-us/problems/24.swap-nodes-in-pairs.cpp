@@ -17,19 +17,18 @@
  */
 class Solution {
  public:
-  ListNode *swapPairs(ListNode *head) {
+  ListNode* swapPairs(ListNode* head) {
     if (!head) {
       return nullptr;
     }
     if (!head->next) {
       return head;
     }
-    ListNode *next = head->next;
-    ListNode *next2 = swapPairs(next->next);
+    ListNode* next = head->next;
+    ListNode* next2 = swapPairs(next->next);
     next->next = head;
     head->next = next2;
     return next;
   }
 };
 // @lc code=end
-

@@ -18,8 +18,7 @@ class Solution {
       i++;
     }
     while ((s[i] - '0') >= 0 && (s[i] - '0') <= 9) {
-      if (((num * 10) + (s[i] - '0')) > INT_MAX)
-        return isNegative ? INT_MIN : INT_MAX;
+      if (((num * 10) + (s[i] - '0')) > INT_MAX) return isNegative ? INT_MIN : INT_MAX;
       num = num * 10 + (s[i] - '0');
       i++;
     }
@@ -27,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

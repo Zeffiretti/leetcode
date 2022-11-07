@@ -17,15 +17,14 @@
  */
 class Solution {
  public:
-  ListNode *reverseList(ListNode *head) {
+  ListNode* reverseList(ListNode* head) {
     if (!head) return nullptr;
-    if (!head -> next) return head;
-    ListNode *next = head->next;
+    if (!head->next) return head;
+    ListNode* next = head->next;
     head->next = nullptr;
-    ListNode *new_head = reverseList(next);
+    ListNode* new_head = reverseList(next);
     next->next = head;
     return new_head;
   }
 };
 // @lc code=end
-

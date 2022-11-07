@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> subsetsWithDup(vector<int> &nums) {
+  vector<vector<int>> subsetsWithDup(vector<int>& nums) {
     sort(nums.begin(), nums.end());
     vector<vector<int>> res;
     vector<int> cur;
@@ -15,8 +15,7 @@ class Solution {
     return res;
   }
 
-  void dfs(vector<vector<int>> &res, vector<int> &nums, int index,
-           vector<int> &cur) {
+  void dfs(vector<vector<int>>& res, vector<int>& nums, int index, vector<int>& cur) {
     res.push_back(cur);
     for (int i = index; i < nums.size(); i++) {
       if (i > index && nums[i] == nums[i - 1]) {
@@ -29,4 +28,3 @@ class Solution {
   }
 };
 // @lc code=end
-

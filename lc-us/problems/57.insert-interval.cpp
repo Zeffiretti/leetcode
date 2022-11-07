@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> insert(vector<vector<int>> &intervals, vector<int> &newInterval) {
+  vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
     vector<vector<int>> res;
     int n = intervals.size();
     if (n == 0) {
@@ -37,4 +37,3 @@ class Solution {
   }
 };
 // @lc code=end
-

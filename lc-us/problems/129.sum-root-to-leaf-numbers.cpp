@@ -18,13 +18,13 @@
  */
 class Solution {
  public:
-  int sumNumbers(TreeNode *root) {
+  int sumNumbers(TreeNode* root) {
     if (!root) return 0;
     if (!root->left && !root->right) return root->val;
     int res = 0;
     return dfs(root->left, root->val) + dfs(root->right, root->val);
   }
-  int dfs(TreeNode *root, int val) {
+  int dfs(TreeNode* root, int val) {
     if (!root) return 0;
     val = val * 10 + root->val;
     if (!root->left && !root->right) {
@@ -34,4 +34,3 @@ class Solution {
   }
 };
 // @lc code=end
-

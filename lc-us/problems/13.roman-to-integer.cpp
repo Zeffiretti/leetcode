@@ -50,8 +50,7 @@ class Solution {
         num += 1000;
       }
     }
-		return num;
+    return num;
   }
 };
 // @lc code=end
-

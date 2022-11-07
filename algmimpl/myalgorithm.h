@@ -1,17 +1,16 @@
 // created by Hiesh on Mar. 10, 2022
 
-
 #ifndef MYALGORITHM_H
 #define MYALGORITHM_H
 
-#include <vector>
-#include <string>
 #include <cmath>
+#include <string>
+#include <vector>
 
 namespace mAlg {
-//quick sort partition
+// quick sort partition
 template <typename T>
-int partition(std::vector<T> &nums, int left, int right) {
+int partition(std::vector<T>& nums, int left, int right) {
   int pivot = nums[left];
   int i = left;
   int j = right + 1;
@@ -29,9 +28,9 @@ int partition(std::vector<T> &nums, int left, int right) {
   return j;
 }
 
-//quick sort
+// quick sort
 template <typename T>
-void quickSort(std::vector<T> &nums, int left, int right) {
+void quickSort(std::vector<T>& nums, int left, int right) {
   if (left >= right) return;
   int pivot = partition(nums, left, right);
   quickSort(nums, left, pivot - 1);
@@ -40,7 +39,7 @@ void quickSort(std::vector<T> &nums, int left, int right) {
 
 // random partition
 template <typename T>
-int randomPartition(std::vector<T> &nums, int left, int right) {
+int randomPartition(std::vector<T>& nums, int left, int right) {
   int pivot = left + rand() % (right - left + 1);
   std::swap(nums[pivot], nums[left]);
   return partition(nums, left, right);
@@ -48,7 +47,7 @@ int randomPartition(std::vector<T> &nums, int left, int right) {
 
 // random quick sort
 template <typename T>
-void randomQuickSort(std::vector<T> &nums, int left, int right) {
+void randomQuickSort(std::vector<T>& nums, int left, int right) {
   if (left >= right) return;
   int pivot = randomPartition(nums, left, right);
   randomQuickSort(nums, left, pivot - 1);
@@ -57,7 +56,7 @@ void randomQuickSort(std::vector<T> &nums, int left, int right) {
 
 // binary search
 template <typename T>
-int binarySearch(std::vector<T> &nums, int left, int right, T target) {
+int binarySearch(std::vector<T>& nums, int left, int right, T target) {
   if (left > right) return -1;
   int mid = left + (right - left) / 2;
   if (nums[mid] == target) return mid;
@@ -65,9 +64,9 @@ int binarySearch(std::vector<T> &nums, int left, int right, T target) {
   return binarySearch(nums, mid + 1, right, target);
 }
 
-//heapify method
+// heapify method
 template <typename T>
-void heapify(std::vector<T> &nums, int size, int i) {
+void heapify(std::vector<T>& nums, int size, int i) {
   int largest = i;
   int left = 2 * i + 1;
   int right = 2 * i + 2;
@@ -83,9 +82,9 @@ void heapify(std::vector<T> &nums, int size, int i) {
   }
 }
 
-//heapsort nums
+// heapsort nums
 template <typename T>
-void heapSort(std::vector<T> &nums) {
+void heapSort(std::vector<T>& nums) {
   int size = nums.size();
   for (int i = size / 2 - 1; i >= 0; i--) {
     heapify(nums, size, i);
@@ -96,9 +95,9 @@ void heapSort(std::vector<T> &nums) {
   }
 }
 
-//counting sort
+// counting sort
 template <typename T>
-void countingSort(std::vector<T> &nums) {
+void countingSort(std::vector<T>& nums) {
   // find the max number
   int max_num = nums[0];
   for (int i = 1; i < nums.size(); i++) {
@@ -124,7 +123,7 @@ void countingSort(std::vector<T> &nums) {
 
 // Radix sort
 template <typename T>
-void radixSort(std::vector<T> &nums) {
+void radixSort(std::vector<T>& nums) {
   int max_num = nums[0];
   for (int i = 1; i < nums.size(); i++) {
     if (nums[i] > max_num) {
@@ -157,7 +156,7 @@ void radixSort(std::vector<T> &nums) {
 
 // Radix sort with bucket
 template <typename T>
-void radixSortWithBucket(std::vector<T> &nums) {
+void radixSortWithBucket(std::vector<T>& nums) {
   int max_num = nums[0];
   for (int i = 1; i < nums.size(); i++) {
     if (nums[i] > max_num) {
@@ -184,7 +183,7 @@ void radixSortWithBucket(std::vector<T> &nums) {
 
 // Radix sort with counting sort
 template <typename T>
-void radixSortWithCountingSort(std::vector<T> &nums) {
+void radixSortWithCountingSort(std::vector<T>& nums) {
   int max_num = nums[0];
   for (int i = 1; i < nums.size(); i++) {
     if (nums[i] > max_num) {
@@ -217,7 +216,7 @@ void radixSortWithCountingSort(std::vector<T> &nums) {
 
 // select ith smallest of nums using Randomized divide-and-conquer algorithm
 template <typename T>
-T select(std::vector<T> &nums, int i) {
+T select(std::vector<T>& nums, int i) {
   int left = 0;
   int right = nums.size() - 1;
   while (left <= right) {
@@ -251,7 +250,7 @@ T select(std::vector<T> &nums, int i) {
 
 // select ith smallest of nums using dividing them into 5 groups
 template <typename T>
-T selectWithGroups(std::vector<T> &nums, int i) {
+T selectWithGroups(std::vector<T>& nums, int i) {
   // divide nums into 5 froups
   int group_size = nums.size() / 5;
   std::vector<std::vector<T>> groups(5, std::vector<T>());
@@ -288,7 +287,7 @@ T selectWithGroups(std::vector<T> &nums, int i) {
 //        i: rank
 // output: the ith smallest element
 template <typename T>
-T select(std::vector<T> &nums, int p, int q, int i) {
+T select(std::vector<T>& nums, int p, int q, int i) {
   if (p == q) {
     return nums[p];
   }
@@ -303,6 +302,5 @@ T select(std::vector<T> &nums, int p, int q, int i) {
   }
 }
 
-
 }  // namespace mAlg
-#endif // MYALGORITHM_H
+#endif  // MYALGORITHM_H

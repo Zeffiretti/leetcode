@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<int> sortedSquares(vector<int> &nums) {
+  vector<int> sortedSquares(vector<int>& nums) {
     int left = 0, right = nums.size() - 1;
     vector<int> res(nums.size());
     for (int i = nums.size() - 1; i >= 0; i--) {
@@ -23,4 +23,3 @@ class Solution {
   }
 };
 // @lc code=end
-

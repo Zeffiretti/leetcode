@@ -1,12 +1,12 @@
-#include <vector>
 #include <algorithm>
 #include <iostream>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  bool matchReplacement(string s, string sub, vector<vector<char>> &mappings) {
+  bool matchReplacement(string s, string sub, vector<vector<char>>& mappings) {
     vector<vector<char>> maps(128);
     for (int i = 0; i < maps.size(); i++) {
       maps[i].push_back(i);
@@ -25,7 +25,7 @@ class Solution {
     }
     return false;
   }
-  void dfs(vector<string> &combins, string &cur, string sub, vector<vector<char>> &maps) {
+  void dfs(vector<string>& combins, string& cur, string sub, vector<vector<char>>& maps) {
     if (cur.size() == sub.size()) {
       combins.push_back(cur);
       return;

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int jump(vector<int> &nums) {
+  int jump(vector<int>& nums) {
     int n = nums.size();
     if (n == 1) return 0;
     int steps = 0;
@@ -20,7 +20,7 @@ class Solution {
   }
 
   // look for the far depature index that can reach the dest
-  int reach(vector<int> &nums, int dest) {
+  int reach(vector<int>& nums, int dest) {
     int n = nums.size();
     int depature = 0;
     for (int i = 0; i < dest; ++i) {
@@ -33,4 +33,3 @@ class Solution {
   }
 };
 // @lc code=end
-

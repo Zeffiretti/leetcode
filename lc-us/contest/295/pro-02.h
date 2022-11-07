@@ -1,8 +1,8 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
 #include <iostream>
 #include <string>
-#include <stdio.h>
+#include <vector>
 using namespace std;
 
 #include <stdio.h>

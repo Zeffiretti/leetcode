@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int orangesRotting(vector<vector<int>> &grid) {
+  int orangesRotting(vector<vector<int>>& grid) {
     int m = grid.size();
     int n = grid[0].size();
     if (m == 1 && n == 1) return grid[0][0] == 1 ? -1 : 0;
@@ -59,4 +59,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -25,31 +25,26 @@ public:
 
 class Solution {
  public:
-  Node *connect(Node *root) {
+  Node* connect(Node* root) {
     if (!root) return nullptr;
-    vector<Node *> nodes;
+    vector<Node*> nodes;
     nodes.push_back(root);
     while (!nodes.empty()) {
       int size = nodes.size();
-      vector<Node *> next_nodes;
+      vector<Node*> next_nodes;
       for (int i = 0; i < size - 1; ++i) {
         // cout << nodes[i]->val << " -> ";
         nodes[i]->next = nodes[i + 1];
-        if (nodes[i]->left)
-          next_nodes.push_back(nodes[i]->left);
-        if (nodes[i]->right)
-          next_nodes.push_back(nodes[i]->right);
+        if (nodes[i]->left) next_nodes.push_back(nodes[i]->left);
+        if (nodes[i]->right) next_nodes.push_back(nodes[i]->right);
       }
       // cout << nodes[size - 1]->val << endl;
       nodes[size - 1]->next = nullptr;
-      if (nodes[size - 1]->left)
-        next_nodes.push_back(nodes[size - 1]->left);
-      if (nodes[size - 1]->right)
-        next_nodes.push_back(nodes[size - 1]->right);
+      if (nodes[size - 1]->left) next_nodes.push_back(nodes[size - 1]->left);
+      if (nodes[size - 1]->right) next_nodes.push_back(nodes[size - 1]->right);
       nodes = next_nodes;
     }
     return root;
   }
 };
 // @lc code=end
-

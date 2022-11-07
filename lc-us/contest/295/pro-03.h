@@ -1,14 +1,14 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
+#include <iostream>
 #include <map>
 #include <set>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int totalSteps(vector<int> &nums) {
+  int totalSteps(vector<int>& nums) {
     int res = 0;
     int pre = 0;
     nums.insert(nums.begin(), 0);

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int findMin(vector<int> &nums) {
+  int findMin(vector<int>& nums) {
     int left = 0, right = nums.size() - 1;
     while (right > left && nums[left] == nums[right]) {
       right--;
@@ -32,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

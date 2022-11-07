@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int maxProduct(vector<int> &nums) {
+  int maxProduct(vector<int>& nums) {
     int result = nums[0];
     int f_min = nums[0];
     int f_max = nums[0];
@@ -21,4 +21,3 @@ class Solution {
   }
 };
 // @lc code=end
-

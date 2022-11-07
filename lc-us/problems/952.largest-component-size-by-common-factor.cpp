@@ -17,8 +17,7 @@ class DSU {
   }
 
   int findParent(int node) {
-    if (parent[node] == node)
-      return node;
+    if (parent[node] == node) return node;
 
     return parent[node] = findParent(parent[node]);
   }
@@ -27,31 +26,26 @@ class DSU {
     int uParent = findParent(u);
     int vParent = findParent(v);
 
-    if (uParent != vParent)
-      parent[uParent] = parent[vParent];
+    if (uParent != vParent) parent[uParent] = parent[vParent];
   }
 };
 
 class Solution {
-
  public:
-  int largestComponentSize(vector<int> &nums) {
-
+  int largestComponentSize(vector<int>& nums) {
     int n = *max_element(nums.begin(), nums.end());
 
     DSU dsu(n + 1);
 
     // do union for each element with all of the element's factors
-    for (auto &val : nums) {
+    for (auto& val : nums) {
       for (int i = 2; i * i <= val; i++) {
         if (val % i == 0) {
           dsu._union(val, i);
           dsu._union(val, val / i);
-
         }
       }
     }
-
 
     unordered_map<int, int> mp;
     int res = 1;
@@ -65,4 +59,3 @@ class Solution {
   }
 };
 // @lc code=end
-

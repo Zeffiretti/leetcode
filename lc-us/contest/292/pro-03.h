@@ -1,6 +1,6 @@
+#include <iostream>
 #include <string>
 #include <vector>
-#include <iostream>
 using namespace std;
 
 class Solution {
@@ -23,7 +23,7 @@ class Solution {
         cnt++;
         int key = min(cnt, keys[pressedKeys[i] - '1']);
         for (int j = 0; j < key; ++j) {
-          dp[i + 1] += dp[i  - j];
+          dp[i + 1] += dp[i - j];
           dp[i + 1] %= 1000000007;
         }
       }

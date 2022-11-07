@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  bool canPlaceFlowers(vector<int> &flowerbed, int n) {
+  bool canPlaceFlowers(vector<int>& flowerbed, int n) {
     int pre = -2;
     for (int i = 0; i < flowerbed.size(); ++i) {
       if (flowerbed[i] == 1) {
@@ -26,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

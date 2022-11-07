@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int rob(vector<int> &nums) {
+  int rob(vector<int>& nums) {
     vector<int> dp(nums.size(), 0);
     if (nums.size() == 0) return 0;
     if (nums.size() == 1) return nums[0];
@@ -21,4 +21,3 @@ class Solution {
   }
 };
 // @lc code=end
-

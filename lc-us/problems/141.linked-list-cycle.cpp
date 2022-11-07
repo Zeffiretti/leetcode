@@ -15,8 +15,8 @@
  */
 class Solution {
  public:
-  bool hasCycle(ListNode *head) {
-    unordered_set<ListNode *> visited;
+  bool hasCycle(ListNode* head) {
+    unordered_set<ListNode*> visited;
     while (head) {
       if (visited.find(head) != visited.end()) {
         return true;
@@ -28,4 +28,3 @@ class Solution {
   }
 };
 // @lc code=end
-

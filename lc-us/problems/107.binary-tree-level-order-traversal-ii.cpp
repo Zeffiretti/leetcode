@@ -18,14 +18,14 @@
  */
 class Solution {
  public:
-  vector<vector<int>> levelOrderBottom(TreeNode *root) {
+  vector<vector<int>> levelOrderBottom(TreeNode* root) {
     int depth = depthOfTree(root);
     vector<vector<int>> trees(depth);
     if (!root) return trees;
-    vector<TreeNode *> nodes;
+    vector<TreeNode*> nodes;
     nodes.push_back(root);
     while (!nodes.empty()) {
-      vector<TreeNode *> new_nodes;
+      vector<TreeNode*> new_nodes;
       vector<int> tree;
       for (int i = 0; i < nodes.size(); ++i) {
         tree.push_back(nodes[i]->val);
@@ -41,11 +41,11 @@ class Solution {
     }
     return trees;
   }
+
  private:
-  int depthOfTree(TreeNode *root) {
+  int depthOfTree(TreeNode* root) {
     if (!root) return 0;
     return max(depthOfTree(root->left), depthOfTree(root->right)) + 1;
   }
 };
 // @lc code=end
-

@@ -7,10 +7,10 @@
 // @lc code=start
 class Solution {
  public:
-  bool canFinish(int numCourses, vector<vector<int>> &prerequisites) {
+  bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
     vector<vector<int>> graph(numCourses);
     vector<int> indegree(numCourses, 0);
-    for (auto &pre : prerequisites) {
+    for (auto& pre : prerequisites) {
       graph[pre[1]].push_back(pre[0]);
       ++indegree[pre[0]];
     }
@@ -25,7 +25,7 @@ class Solution {
       int cur = q.front();
       q.pop();
       ++count;
-      for (auto &next : graph[cur]) {
+      for (auto& next : graph[cur]) {
         --indegree[next];
         if (indegree[next] == 0) {
           q.push(next);
@@ -36,4 +36,3 @@ class Solution {
   }
 };
 // @lc code=end
-

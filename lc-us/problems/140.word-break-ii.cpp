@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<string> wordBreak(string s, vector<string> &wordDict) {
+  vector<string> wordBreak(string s, vector<string>& wordDict) {
     unordered_set<string> dict(wordDict.begin(), wordDict.end());
     vector<bool> dp(s.size() + 1, false);
     dp[0] = true;
@@ -16,11 +16,7 @@ class Solution {
     wordBreakUtil(s, dict, res, curr, 0);
     return res;
   }
-  void wordBreakUtil(string s,
-                     unordered_set<string> &dict,
-                     vector<string> &res,
-                     string curr,
-                     int idx) {
+  void wordBreakUtil(string s, unordered_set<string>& dict, vector<string>& res, string curr, int idx) {
     if (s.size() == idx) {
       // erase the last space
       curr.pop_back();
@@ -36,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

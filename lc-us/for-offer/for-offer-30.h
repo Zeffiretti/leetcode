@@ -1,37 +1,27 @@
-#include <cstdio>
-#include <iostream>
-#include <string>
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
 #include <ctime>
-#include <vector>
-#include <unordered_map>
-#include <string>
+#include <iostream>
 #include <stack>
+#include <string>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 class MinStack {
  public:
   /** initialize your data structure here. */
-  MinStack() {
-    data.clear();
-  }
+  MinStack() { data.clear(); }
 
-  void push(int x) {
+  void push(int x) {}
 
-  }
+  void pop() {}
 
-  void pop() {
+  int top() {}
 
-  }
+  int min() {}
 
-  int top() {
-
-  }
-
-  int min() {
-
-  }
  private:
   vector<int> data;
   int min_val;

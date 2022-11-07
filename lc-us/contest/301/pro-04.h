@@ -1,13 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
+#include <iostream>
 #include <iterator>
 #include <list>
 #include <map>
 #include <set>
-#include <list>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
@@ -35,12 +34,10 @@ class Solution {
       layers = new_layers;
     }
     int ans = 0;
-    for (int i = 0; i <= n; i++)
-      ans = ans % 1000000007 * dp[i] % 1000000007;
+    for (int i = 0; i <= n; i++) ans = ans % 1000000007 * dp[i] % 1000000007;
     return ans;
-
   }
-  void dfs(vector<int> &cur, int maxValue, int n) {
+  void dfs(vector<int>& cur, int maxValue, int n) {
     if (cur.size() == n) {
       res++;
       res %= 1000000007;
@@ -55,6 +52,7 @@ class Solution {
       factor++;
     }
   }
+
  private:
   int res = 0;
 };

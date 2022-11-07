@@ -29,4 +29,3 @@ class Solution {
   // dp[i] = dp[i-1] + 2 if s[i] == ')' and '(' count >0
 };
 // @lc code=end
-

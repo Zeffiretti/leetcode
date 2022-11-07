@@ -8,10 +8,10 @@ using namespace std;
 // @lc code=start
 class Solution {
  public:
-  vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
-    vector<int>ans;
-    unordered_map<int, int>mp;
-    stack<int>s;
+  vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> ans;
+    unordered_map<int, int> mp;
+    stack<int> s;
     for (auto el : nums2) {
       while (!s.empty() && s.top() < el) {
         mp[s.top()] = el;
@@ -28,7 +28,7 @@ class Solution {
 };
 // @lc code=end
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   Solution sol;
   vector<int> nums1, nums2;
   nums1.resize(3);

@@ -1,7 +1,7 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
@@ -16,4 +16,3 @@ class Solution {
     return count * 100 / s.size();
   }
 };
-

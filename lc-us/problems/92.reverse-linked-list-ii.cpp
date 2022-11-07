@@ -17,22 +17,22 @@
  */
 class Solution {
  public:
-  ListNode *reverseBetween(ListNode *head, int left, int right) {
+  ListNode* reverseBetween(ListNode* head, int left, int right) {
     if (head == nullptr) {
       return nullptr;
     }
-    ListNode *dummy = new ListNode(0);
+    ListNode* dummy = new ListNode(0);
     dummy->next = head;
-    ListNode *prev = dummy;
-    ListNode *cur = head;
+    ListNode* prev = dummy;
+    ListNode* cur = head;
     for (int i = 0; i < left - 1; ++i) {
       prev = cur;
       cur = cur->next;
     }
-    ListNode *start = cur;
-    ListNode *end = cur->next;
+    ListNode* start = cur;
+    ListNode* end = cur->next;
     for (int i = left; i < right; ++i) {
-      ListNode *tmp = end->next;
+      ListNode* tmp = end->next;
       end->next = cur;
       cur = end;
       end = tmp;
@@ -43,4 +43,3 @@ class Solution {
   }
 };
 // @lc code=end
-

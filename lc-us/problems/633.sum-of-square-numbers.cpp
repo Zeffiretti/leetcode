@@ -12,11 +12,12 @@ class Solution {
     ll left = 0, right = sqrt(c);
     while (left <= right) {
       if (left * left + right * right == c) return true;
-      if (left * left + right * right < c) left++;
-      else right--;
+      if (left * left + right * right < c)
+        left++;
+      else
+        right--;
     }
     return false;
   }
 };
 // @lc code=end
-

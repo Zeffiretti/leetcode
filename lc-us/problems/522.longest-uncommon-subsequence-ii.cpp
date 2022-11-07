@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int findLUSlength(vector<string> &strs) {
+  int findLUSlength(vector<string>& strs) {
     string substr = strs.at(0);
     int max_len = substr.length();
     for (int i = 1; i < strs.size(); i++) {
@@ -20,4 +20,3 @@ class Solution {
   }
 };
 // @lc code=end
-

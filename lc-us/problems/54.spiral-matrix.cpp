@@ -7,11 +7,11 @@
 // @lc code=start
 class Solution {
  public:
-  vector<int> spiralOrder(vector<vector<int>> &matrix) {
+  vector<int> spiralOrder(vector<vector<int>>& matrix) {
     vector<int> res;
     int m = matrix.size(), n = matrix[0].size();
     if (m == 1) return matrix[0];
-    int px[] = {0, 1, 0, -1};// right, down, left, up
+    int px[] = {0, 1, 0, -1};  // right, down, left, up
     int py[] = {1, 0, -1, 0};
     int direction_index = 0;
     int cnt = 0;
@@ -34,4 +34,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -1,12 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  double calculateTax(vector<vector<int>> &brackets, int income) {
+  double calculateTax(vector<vector<int>>& brackets, int income) {
     double res = 0;
     int index = 0;
     while (index < brackets.size() && income > brackets[index][0]) {

@@ -1,13 +1,13 @@
-#include <vector>
 #include <algorithm>
 #include <iostream>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 class BookMyShow {
  public:
   BookMyShow(int n, int m) {
-    //init seats with n elements of m
+    // init seats with n elements of m
     seats.resize(n);
     for (int i = 0; i < n; ++i) {
       seats[i].resize(2);
@@ -64,6 +64,7 @@ class BookMyShow {
     }
     return false;
   }
+
  private:
   vector<vector<int>> seats;
   int m_;

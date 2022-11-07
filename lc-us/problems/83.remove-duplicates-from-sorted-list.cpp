@@ -17,8 +17,8 @@
  */
 class Solution {
  public:
-  ListNode *deleteDuplicates(ListNode *head) {
-    ListNode *curr = head;
+  ListNode* deleteDuplicates(ListNode* head) {
+    ListNode* curr = head;
     while (curr && curr->next) {
       if (curr->val == curr->next->val) {
         curr->next = curr->next->next;
@@ -30,4 +30,3 @@ class Solution {
   }
 };
 // @lc code=end
-

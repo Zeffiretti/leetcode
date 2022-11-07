@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int maximalSquare(vector<vector<char>> &matrix) {
+  int maximalSquare(vector<vector<char>>& matrix) {
     if (matrix.empty() || matrix[0].empty()) {
       return 0;
     }
@@ -25,4 +25,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int findKthLargest(vector<int> &nums, int k) {
+  int findKthLargest(vector<int>& nums, int k) {
     int left = 0, right = nums.size() - 1, target = nums.size() - (k);
     while (left < right) {
       int mid = partition(nums, left, right);
@@ -22,7 +22,7 @@ class Solution {
     }
     return nums[left];
   }
-  int partition(vector<int> &nums, int left, int right) {
+  int partition(vector<int>& nums, int left, int right) {
     int i = left + 1, j = right;
     while (true) {
       while (i < right && nums[i] <= nums[left]) {
@@ -41,4 +41,3 @@ class Solution {
   }
 };
 // @lc code=end
-

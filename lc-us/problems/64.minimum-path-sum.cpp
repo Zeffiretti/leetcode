@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int minPathSum(vector<vector<int>> &grid) {
+  int minPathSum(vector<vector<int>>& grid) {
     vector<vector<int>> dp(grid.size(), vector<int>(grid[0].size(), 2e6));
     for (int i = 0; i < grid.size(); ++i) {
       for (int j = 0; j < grid[0].size(); ++j) {
@@ -26,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -7,10 +7,10 @@
 // @lc code=start
 class Solution {
  public:
-  int minStartValue(vector<int> &nums) {
+  int minStartValue(vector<int>& nums) {
     int m_min = 0;
     int integ = 0;
-    for (auto &i : nums) {
+    for (auto& i : nums) {
       integ += i;
       m_min = min(m_min, integ);
     }
@@ -18,4 +18,3 @@ class Solution {
   }
 };
 // @lc code=end
-

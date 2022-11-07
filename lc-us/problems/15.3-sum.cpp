@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> threeSum(vector<int> &nums) {
+  vector<vector<int>> threeSum(vector<int>& nums) {
     vector<vector<int>> res;
     if (nums.size() < 3) {
       return res;
@@ -42,4 +42,3 @@ class Solution {
   }
 };
 // @lc code=end
-

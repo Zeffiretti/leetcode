@@ -7,45 +7,44 @@
 // @lc code=start
 class Trie {
  public:
-  Trie() {
-    root = new TrieNode();
-  }
+  Trie() { root = new TrieNode(); }
 
   void insert(string word) {
-    TrieNode *cur = root;
+    TrieNode* cur = root;
     for (int i = 0; i < word.size(); ++i) {
-      if (cur -> children[word[i] - 'a'] == nullptr) {
-        cur -> children[word[i] - 'a'] = new TrieNode();
+      if (cur->children[word[i] - 'a'] == nullptr) {
+        cur->children[word[i] - 'a'] = new TrieNode();
       }
-      cur = cur -> children[word[i] - 'a'];
+      cur = cur->children[word[i] - 'a'];
     }
-    cur -> is_word = true;
+    cur->is_word = true;
   }
 
   bool search(string word) {
-    TrieNode *cur = root;
+    TrieNode* cur = root;
     for (int i = 0; i < word.size(); ++i) {
-      if (cur -> children[word[i] - 'a'] == nullptr) {
+      if (cur->children[word[i] - 'a'] == nullptr) {
         return false;
       }
-      cur = cur -> children[word[i] - 'a'];
+      cur = cur->children[word[i] - 'a'];
     }
-    return cur -> is_word;
+    return cur->is_word;
   }
 
   bool startsWith(string prefix) {
-    TrieNode *cur = root;
+    TrieNode* cur = root;
     for (int i = 0; i < prefix.size(); ++i) {
-      if (cur -> children[prefix[i] - 'a'] == nullptr) {
+      if (cur->children[prefix[i] - 'a'] == nullptr) {
         return false;
       }
-      cur = cur -> children[prefix[i] - 'a'];
+      cur = cur->children[prefix[i] - 'a'];
     }
     return true;
   }
+
  private:
   struct TrieNode {
-    TrieNode *children[26];
+    TrieNode* children[26];
     bool is_word;
     TrieNode() : is_word(false) {
       for (int i = 0; i < 26; ++i) {
@@ -53,7 +52,7 @@ class Trie {
       }
     }
   };
-  TrieNode *root;
+  TrieNode* root;
 };
 
 /**
@@ -64,4 +63,3 @@ class Trie {
  * bool param_3 = obj->startsWith(prefix);
  */
 // @lc code=end
-

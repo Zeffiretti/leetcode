@@ -1,12 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int minMaxGame(vector<int> &nums) {
+  int minMaxGame(vector<int>& nums) {
     int n = nums.size();
     while (n > 1) {
       n /= 2;
@@ -23,4 +23,3 @@ class Solution {
     return nums[0];
   }
 };
-

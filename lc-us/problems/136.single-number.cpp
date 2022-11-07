@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int singleNumber(vector<int> &nums) {
+  int singleNumber(vector<int>& nums) {
     unordered_set<int> set;
     int res = 0;
     for (auto num : nums) {
@@ -23,4 +23,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -1,14 +1,12 @@
-#include <vector>
-#include <string>
 #include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  bool hasValidPath(vector<vector<char>> &grid) {
-    return hasValidPath(grid, 0, 0, 0);
-  }
-  bool hasValidPath(vector<vector<char>> &grid, int par_left, int i, int j) {
+  bool hasValidPath(vector<vector<char>>& grid) { return hasValidPath(grid, 0, 0, 0); }
+  bool hasValidPath(vector<vector<char>>& grid, int par_left, int i, int j) {
     if (par_left < 0) return false;
     int m = grid.size();
     int n = grid[0].size();

@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
  public:
-  int waysToSplitArray(vector<int> &nums) {
+  int waysToSplitArray(vector<int>& nums) {
     int sum = 0;
     for (auto num : nums) {
       sum += num;

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int singleNonDuplicate(vector<int> &nums) {
+  int singleNonDuplicate(vector<int>& nums) {
     if (nums.size() == 1) {
       return nums[0];
     }
@@ -20,4 +20,3 @@ class Solution {
   }
 };
 // @lc code=end
-

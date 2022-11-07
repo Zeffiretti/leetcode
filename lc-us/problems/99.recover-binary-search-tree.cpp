@@ -18,7 +18,7 @@
  */
 class Solution {
  public:
-  void recoverTree(TreeNode *root) {
+  void recoverTree(TreeNode* root) {
     if (!root) return;
     TreeNode *prev = nullptr, *first = nullptr, *second = nullptr;
     inorder(root, prev, first, second);
@@ -26,7 +26,7 @@ class Solution {
       swap(first->val, second->val);
     }
   }
-  void inorder(TreeNode *root, TreeNode *&prev, TreeNode *&first, TreeNode *&second) {
+  void inorder(TreeNode* root, TreeNode*& prev, TreeNode*& first, TreeNode*& second) {
     if (!root) return;
     inorder(root->left, prev, first, second);
     if (prev && prev->val > root->val) {
@@ -38,4 +38,3 @@ class Solution {
   }
 };
 // @lc code=end
-

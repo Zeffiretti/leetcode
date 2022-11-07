@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int threeSumClosest(vector<int> &nums, int target) {
+  int threeSumClosest(vector<int>& nums, int target) {
     int res = 1e5;
     sort(nums.begin(), nums.end());
     for (int i = 0; i < nums.size() - 2; i++) {
@@ -34,4 +34,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  void setZeroes(vector<vector<int>> &matrix) {
+  void setZeroes(vector<vector<int>>& matrix) {
     bool row = false, col = false;
     for (int i = 0; i < matrix.size(); i++) {
       for (int j = 0; j < matrix[0].size(); j++) {
@@ -32,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

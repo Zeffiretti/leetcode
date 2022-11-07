@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int findPeakElement(vector<int> &nums) {
+  int findPeakElement(vector<int>& nums) {
     int n = nums.size();
     if (n == 1) return 0;
     if (n == 2) {
@@ -23,7 +23,7 @@ class Solution {
     return findPeakElementBetween(nums, left, right);
   }
 
-  int findPeakElementBetween(vector<int> &nums, int start, int end) {
+  int findPeakElementBetween(vector<int>& nums, int start, int end) {
     int mid = start + (end - start) / 2;
     if (mid == 0 || mid == nums.size() - 1) {
       return mid;
@@ -38,4 +38,3 @@ class Solution {
   }
 };
 // @lc code=end
-

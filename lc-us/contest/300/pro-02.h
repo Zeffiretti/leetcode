@@ -1,8 +1,8 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
 #include <iostream>
 #include <string>
-#include <stdio.h>
+#include <vector>
 #include "../../utils.h"
 using namespace std;
 
@@ -20,7 +20,7 @@ using namespace std;
  */
 class Solution {
  public:
-  vector<vector<int>> spiralMatrix(int m, int n, ListNode *head) {
+  vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
     vector<vector<int>> res(m, vector<int>(n, -1));
     // right, down, left, up
     vector<pair<int, int>> dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};

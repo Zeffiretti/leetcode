@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  void dfs(vector<vector<string>> &accounts, int i, set<string> &emails) {
+  void dfs(vector<vector<string>>& accounts, int i, set<string>& emails) {
     if (visited[i]) return;
     visited[i] = true;
 
@@ -18,7 +18,7 @@ class Solution {
     }
   }
 
-  vector<vector<string>> accountsMerge(vector<vector<string>> &accounts) {
+  vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
     vector<vector<string>> res;
     visited.assign(accounts.size(), 0);
 
@@ -44,4 +44,3 @@ class Solution {
   vector<bool> visited;
 };
 // @lc code=end
-

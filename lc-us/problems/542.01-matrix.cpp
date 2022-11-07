@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> updateMatrix(vector<vector<int>> &mat) {
+  vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
     int m = mat.size(), n = mat[0].size();
     // initializing result matrix with max value (distance)
     vector<vector<int>> res(m, vector<int>(n, INT_MAX));
@@ -25,7 +25,8 @@ class Solution {
     // right, bottom, left, top - directions in which we can move
     vector<pair<int, int>> dirs{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     while (!q.empty()) {
-      auto cur = q.front(); q.pop();
+      auto cur = q.front();
+      q.pop();
       // position of element whose result is known
       int curx = cur.first;
       int cury = cur.second;
@@ -35,7 +36,8 @@ class Solution {
         int y = cury + dir.second;
         // if the new position is valid
         if (x >= 0 && x < m && y >= 0 && y < n) {
-          // update the distance if previous distance is more than distance of current element + 1 (bcoz. we can move only 1 step at a time)
+          // update the distance if previous distance is more than distance of current element + 1 (bcoz. we can move
+          // only 1 step at a time)
           if (res[x][y] > res[curx][cury] + 1) {
             res[x][y] = res[curx][cury] + 1;
             // adding result to queue to use to derive other distances
@@ -49,4 +51,3 @@ class Solution {
   }
 };
 // @lc code=end
-

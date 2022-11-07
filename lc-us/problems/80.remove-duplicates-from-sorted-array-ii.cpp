@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int removeDuplicates(vector<int> &nums) {
+  int removeDuplicates(vector<int>& nums) {
     int n = nums.size();
     if (n <= 2) return n;
     int i = 2;
@@ -20,4 +20,3 @@ class Solution {
   }
 };
 // @lc code=end
-

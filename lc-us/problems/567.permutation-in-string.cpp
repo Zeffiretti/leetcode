@@ -47,7 +47,7 @@ class Solution {
 };
 // @lc code=end
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   Solution s;
   cout << s.checkInclusion("obcoaaob", "eidbaoooabcd") << endl;
   return 0;

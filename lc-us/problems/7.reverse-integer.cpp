@@ -9,7 +9,7 @@
 class Solution {
  public:
   int reverse(int x) {
-    if (x == INT_MAX || x == INT_MIN)  {
+    if (x == INT_MAX || x == INT_MIN) {
       return 0;
     }
     bool isNegative = x < 0;
@@ -30,4 +30,3 @@ class Solution {
 };
 
 // @lc code=end
-

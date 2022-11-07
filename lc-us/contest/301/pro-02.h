@@ -1,9 +1,9 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
 #include <iostream>
-#include <string>
-#include <stdio.h>
 #include <set>
+#include <string>
+#include <vector>
 #include "../../utils.h"
 using namespace std;
 

@@ -25,7 +25,6 @@ class CombinationIterator {
     int move_index = indexes.size() - 1;
     for (; move_index > 0; --move_index) {
       if (indexes.at(move_index) == m_characters.size() - indexes.size() + move_index) {
-
       } else {
         break;
       }
@@ -37,9 +36,7 @@ class CombinationIterator {
     return st;
   }
 
-  bool hasNext() {
-    return indexes.at(indexes.size() - 1) <= m_characters.size() - 1;
-  }
+  bool hasNext() { return indexes.at(indexes.size() - 1) <= m_characters.size() - 1; }
 
   // void transfer(void) {
   // if (!hasNext()) {
@@ -57,8 +54,8 @@ class CombinationIterator {
  */
 // @lc code=end
 
-int main(int argc, char **argv) {
-  CombinationIterator *itr = new CombinationIterator("abcdefg", 1);
+int main(int argc, char** argv) {
+  CombinationIterator* itr = new CombinationIterator("abcdefg", 1);
   while (itr->hasNext()) {
     cout << itr->next().c_str() << endl;
   }

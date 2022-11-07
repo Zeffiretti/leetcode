@@ -11,8 +11,7 @@ class Solution {
       count[num[i] - '0']++;
     }
     for (int i = 0; i < num.size(); ++i) {
-      if (count[i] != num[i] - '0')
-        return false;
+      if (count[i] != num[i] - '0') return false;
     }
     return true;
   }

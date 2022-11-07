@@ -1,17 +1,17 @@
-#include <vector>
-#include <string>
-#include <iostream>
-#include <unordered_map>
 #include <algorithm>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
 #define ll long long
-  long long countPairs(int n, vector<vector<int>> &edges) {
+  long long countPairs(int n, vector<vector<int>>& edges) {
     vector<bool> visited(n, false);
     vector<vector<int>> adj(n);
-    for (auto &e : edges) {
+    for (auto& e : edges) {
       adj[e[0]].push_back(e[1]);
       adj[e[1]].push_back(e[0]);
     }
@@ -32,7 +32,7 @@ class Solution {
     }
     return res;
   }
-  void dfs(int u, vector<bool> &visited, vector<vector<int>> &adj, vector<int> &group) {
+  void dfs(int u, vector<bool>& visited, vector<vector<int>>& adj, vector<int>& group) {
     visited[u] = true;
     group.push_back(u);
     for (auto v : adj[u]) {

@@ -1,12 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  vector<string> removeAnagrams(vector<string> &words) {
+  vector<string> removeAnagrams(vector<string>& words) {
     if (words.size() == 1) return words;
     vector<string> res;
     res.push_back(words[0]);
@@ -41,4 +41,3 @@ class Solution {
     return res;
   }
 };
-

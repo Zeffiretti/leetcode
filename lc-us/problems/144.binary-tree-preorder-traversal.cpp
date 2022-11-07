@@ -18,7 +18,7 @@
  */
 class Solution {
  public:
-  vector<int> preorderTraversal(TreeNode *root) {
+  vector<int> preorderTraversal(TreeNode* root) {
     vector<int> res;
     if (root == nullptr) {
       return res;
@@ -26,7 +26,7 @@ class Solution {
     preorder(root, res);
     return res;
   }
-  void preorder(TreeNode *root, vector<int> &res) {
+  void preorder(TreeNode* root, vector<int>& res) {
     if (root == nullptr) {
       return;
     }
@@ -36,4 +36,3 @@ class Solution {
   }
 };
 // @lc code=end
-

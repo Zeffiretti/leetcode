@@ -18,14 +18,14 @@
  */
 class Solution {
  public:
-  void rec(TreeNode *root, int low, int high) {
+  void rec(TreeNode* root, int low, int high) {
     if (!root) return;
     if (root->val <= high && root->val >= low) res += root->val;
     rec(root->left, low, high);
     rec(root->right, low, high);
   }
 
-  int rangeSumBST(TreeNode *root, int low, int high) {
+  int rangeSumBST(TreeNode* root, int low, int high) {
     rec(root, low, high);
     return res;
   }
@@ -35,7 +35,7 @@ class Solution {
 };
 // @lc code=end
 
-int main(int argc, char **arhv) {
+int main(int argc, char** arhv) {
   std::cout << "good" << std::endl;
   return 0;
 }

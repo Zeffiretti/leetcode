@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  vector<int> plusOne(vector<int> &digits) {
+  vector<int> plusOne(vector<int>& digits) {
     int carry = 1;
     int index = digits.size() - 1;
     while (carry && index >= 0) {
@@ -23,4 +23,3 @@ class Solution {
   }
 };
 // @lc code=end
-

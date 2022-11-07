@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int candy(vector<int> &ratings) {
+  int candy(vector<int>& ratings) {
     int n = ratings.size();
     vector<int> candies(n, 1);
     for (int i = 1; i < n; ++i) {
@@ -28,4 +28,3 @@ class Solution {
   }
 };
 // @lc code=end
-

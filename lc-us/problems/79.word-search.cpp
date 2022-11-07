@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  bool exist(vector<vector<char>> &board, string word) {
+  bool exist(vector<vector<char>>& board, string word) {
     if (word.empty()) {
       return true;
     }
@@ -29,20 +29,16 @@ class Solution {
     }
     return false;
   }
-  bool dfs(vector<vector<char>> &board, string &word, int index, int i, int j,
-           vector<vector<bool>> &visited) {
+  bool dfs(vector<vector<char>>& board, string& word, int index, int i, int j, vector<vector<bool>>& visited) {
     if (index == word.size()) {
       return true;
     }
-    if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() ||
-        visited[i][j] || board[i][j] != word[index]) {
+    if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() || visited[i][j] || board[i][j] != word[index]) {
       return false;
     }
     visited[i][j] = true;
-    if (dfs(board, word, index + 1, i + 1, j, visited) ||
-        dfs(board, word, index + 1, i - 1, j, visited) ||
-        dfs(board, word, index + 1, i, j + 1, visited) ||
-        dfs(board, word, index + 1, i, j - 1, visited)) {
+    if (dfs(board, word, index + 1, i + 1, j, visited) || dfs(board, word, index + 1, i - 1, j, visited) ||
+        dfs(board, word, index + 1, i, j + 1, visited) || dfs(board, word, index + 1, i, j - 1, visited)) {
       return true;
     }
     visited[i][j] = false;
@@ -50,4 +46,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -18,14 +18,14 @@
  */
 class Solution {
  public:
-  bool isBalanced(TreeNode *root) {
+  bool isBalanced(TreeNode* root) {
     if (!root) return true;
     int left = getDepth(root->left);
     int right = getDepth(root->right);
     if (abs(left - right) > 1) return false;
     return isBalanced(root->left) && isBalanced(root->right);
   }
-  int getDepth(TreeNode *root) {
+  int getDepth(TreeNode* root) {
     if (!root) return 0;
     int left = getDepth(root->left);
     int right = getDepth(root->right);
@@ -33,4 +33,3 @@ class Solution {
   }
 };
 // @lc code=end
-

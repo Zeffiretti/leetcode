@@ -7,9 +7,9 @@
 // @lc code=start
 class Solution {
  public:
-  int evalRPN(vector<string> &tokens) {
+  int evalRPN(vector<string>& tokens) {
     stack<int> s;
-    for (auto &token : tokens) {
+    for (auto& token : tokens) {
       if (token == "+") {
         int a = s.top();
         s.pop();
@@ -42,4 +42,3 @@ class Solution {
   }
 };
 // @lc code=end
-

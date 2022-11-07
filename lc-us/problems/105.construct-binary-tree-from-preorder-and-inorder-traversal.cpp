@@ -18,18 +18,19 @@
  */
 class Solution {
  public:
-  TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+  TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
     if (preorder.empty() || inorder.empty()) {
       return nullptr;
     }
     return buildTree(preorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1);
   }
-  TreeNode *buildTree(vector<int> &preorder, int pre_start, int pre_end, vector<int> &inorder, int in_start, int in_end) {
+  TreeNode* buildTree(vector<int>& preorder, int pre_start, int pre_end, vector<int>& inorder, int in_start,
+                      int in_end) {
     if (pre_start > pre_end || in_start > in_end) {
       return nullptr;
     }
     int root_val = preorder[pre_start];
-    TreeNode *root = new TreeNode(root_val);
+    TreeNode* root = new TreeNode(root_val);
     int root_index = in_start;
     while (root_index <= in_end && inorder[root_index] != root_val) {
       root_index++;
@@ -41,4 +42,3 @@ class Solution {
   }
 };
 // @lc code=end
-

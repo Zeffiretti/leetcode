@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  bool searchMatrix(vector<vector<int>> &matrix, int target) {
+  bool searchMatrix(vector<vector<int>>& matrix, int target) {
     int row = matrix.size();
     int col = matrix[0].size();
     int left = 0;
@@ -27,4 +27,3 @@ class Solution {
   }
 };
 // @lc code=end
-

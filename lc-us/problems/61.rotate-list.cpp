@@ -17,9 +17,9 @@
  */
 class Solution {
  public:
-  ListNode *rotateRight(ListNode *head, int k) {
+  ListNode* rotateRight(ListNode* head, int k) {
     int cnt = 0;
-    ListNode *tail = head;
+    ListNode* tail = head;
     while (tail && tail->next) {
       tail = tail->next;
       cnt++;
@@ -39,4 +39,3 @@ class Solution {
   }
 };
 // @lc code=end
-

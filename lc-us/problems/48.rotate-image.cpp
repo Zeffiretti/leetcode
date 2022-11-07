@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  void rotate(vector<vector<int>> &matrix) {
+  void rotate(vector<vector<int>>& matrix) {
     int n = matrix.size();
     for (int i = 0; i < n / 2; i++) {
       for (int j = i; j < n - i - 1; j++) {
@@ -20,11 +20,10 @@ class Solution {
     }
   }
   // swap 4 items in a loop
-  void swap(vector<vector<int>> &matrix, int i, int j, int k, int l) {
+  void swap(vector<vector<int>>& matrix, int i, int j, int k, int l) {
     int tmp = matrix[i][j];
     matrix[i][j] = matrix[k][l];
     matrix[k][l] = tmp;
   }
 };
 // @lc code=end
-

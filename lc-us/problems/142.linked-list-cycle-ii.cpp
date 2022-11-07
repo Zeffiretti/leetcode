@@ -15,9 +15,9 @@
  */
 class Solution {
  public:
-  ListNode *detectCycle(ListNode *head) {
-    ListNode *slow = head;
-    ListNode *fast = head;
+  ListNode* detectCycle(ListNode* head) {
+    ListNode* slow = head;
+    ListNode* fast = head;
     bool exist_loop = false;
     while (fast && fast->next) {
       slow = slow->next;
@@ -37,4 +37,3 @@ class Solution {
   }
 };
 // @lc code=end
-

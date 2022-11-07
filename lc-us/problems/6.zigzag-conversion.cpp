@@ -17,8 +17,8 @@ class Solution {
     int remainder = size % period;
     string ret;
     ret.clear();
-    for (int i = 0; i < numRows; ++i) { // ith row
-      int ch = 2; //2 characters per loop
+    for (int i = 0; i < numRows; ++i) {  // ith row
+      int ch = 2;                        // 2 characters per loop
       if (i == 0 || i == numRows - 1) {
         ch = 1;
       }
@@ -55,7 +55,7 @@ class Solution {
 };
 // @lc code=end
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   Solution s;
   string st = "ABC";
   auto ss = s.convert(st, 3);

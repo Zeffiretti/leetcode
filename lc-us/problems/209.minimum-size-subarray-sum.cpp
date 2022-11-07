@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int minSubArrayLen(int target, vector<int> &nums) {
+  int minSubArrayLen(int target, vector<int>& nums) {
     int n = nums.size();
     int left = 0, right = 0;
     int sum = 0;
@@ -24,4 +24,3 @@ class Solution {
   }
 };
 // @lc code=end
-

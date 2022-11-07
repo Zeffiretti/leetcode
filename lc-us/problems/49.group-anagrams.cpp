@@ -7,11 +7,11 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<string>> groupAnagrams(vector<string> &strs) {
+  vector<vector<string>> groupAnagrams(vector<string>& strs) {
     unordered_map<string, int> m;
     vector<vector<string>> res;
     int index = 0;
-    for (auto &s : strs) {
+    for (auto& s : strs) {
       string t = s;
       std::sort(t.begin(), t.end());
       if (m.find(t) == m.end()) {
@@ -25,4 +25,3 @@ class Solution {
   }
 };
 // @lc code=end
-

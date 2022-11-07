@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int numberOfArithmeticSlices(vector<int> &nums) {
+  int numberOfArithmeticSlices(vector<int>& nums) {
     if (nums.size() < 3) {
       return 0;
     }
@@ -36,4 +36,3 @@ class Solution {
   }
 };
 // @lc code=end
-

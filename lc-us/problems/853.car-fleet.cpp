@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int carFleet(int target, vector<int> &position, vector<int> &speed) {
+  int carFleet(int target, vector<int>& position, vector<int>& speed) {
     int n = speed.size();
     vector<vector<double> > dp(n, vector<double>(2, 0));
     for (int i = 0; i < n; ++i) {
@@ -32,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

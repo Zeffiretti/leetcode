@@ -10,9 +10,7 @@ class LRUCache {
   int cap;
   list<pair<int, int>> recent;
   unordered_map<int, list<pair<int, int>>::iterator> present;
-  LRUCache(int capacity) {
-    this->cap = capacity;
-  }
+  LRUCache(int capacity) { this->cap = capacity; }
 
   int get(int key) {
     if (present.find(key) == present.end()) {
@@ -48,4 +46,3 @@ class LRUCache {
  * obj->put(key,value);
  */
 // @lc code=end
-

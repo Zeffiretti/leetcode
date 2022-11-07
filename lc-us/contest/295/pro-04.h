@@ -1,17 +1,17 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
+#include <iostream>
 #include <iterator>
 #include <list>
 #include <map>
 #include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int minimumObstacles(vector<vector<int>> &grid) {
+  int minimumObstacles(vector<vector<int>>& grid) {
     vector<vector<int>> dp(grid.size(), vector<int>(grid[0].size(), INT_MAX));
     dp[0][0] = grid[0][0];
     vector<vector<int>> visited(grid.size(), vector<int>(grid[0].size(), 0));
@@ -19,7 +19,8 @@ class Solution {
     return dp[grid.size() - 1][grid[0].size() - 1];
   }
 
-  void dfs(vector<vector<int>> &grid, int i, int j, vector<vector<int>> &visited, int obstacle, vector<vector<int>> &dp) {
+  void dfs(vector<vector<int>>& grid, int i, int j, vector<vector<int>>& visited, int obstacle,
+           vector<vector<int>>& dp) {
     if (i < 0 || i >= grid.size() || j < 0 || j >= grid[0].size()) {
       return;
     }

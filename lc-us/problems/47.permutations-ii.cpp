@@ -6,7 +6,7 @@
 #include "utils.h"
 // @lc code=start
 struct VectorHasher {
-  int operator()(const vector<int> &v) const {
+  int operator()(const vector<int>& v) const {
     int hash;
     for (int i = 0; i < v.size(); i++) {
       hash = hash * 10 + (v[i] + 10);
@@ -17,7 +17,7 @@ struct VectorHasher {
 class Solution {
  public:
   unordered_map<vector<int>, int, VectorHasher> m;
-  vector<vector<int>> permuteUnique(vector<int> &nums) {
+  vector<vector<int>> permuteUnique(vector<int>& nums) {
     vector<vector<int>> res;
     if (nums.empty()) return res;
     vector<int> tmp;
@@ -25,7 +25,7 @@ class Solution {
     return res;
   }
   // dfs algorithm for generating unique permutations
-  void dfsUnique(vector<int> nums, vector<int> &tmp, vector<vector<int>> &res) {
+  void dfsUnique(vector<int> nums, vector<int>& tmp, vector<vector<int>>& res) {
     if (nums.empty()) {
       if (m.find(tmp) == m.end()) {
         res.push_back(tmp);
@@ -44,4 +44,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -44,7 +44,6 @@ class Solution {
 };
 // @lc code=end
 
-
 int main() {
   Solution s;
   string haystack = "hellabcdabcdabdabdo";

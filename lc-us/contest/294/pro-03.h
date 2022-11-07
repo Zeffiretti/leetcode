@@ -1,14 +1,14 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
+#include <iostream>
 #include <map>
 #include <set>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int minimumLines(vector<vector<int>> &stockPrices) {
+  int minimumLines(vector<vector<int>>& stockPrices) {
     if (stockPrices.size() == 1) {
       return 0;
     }

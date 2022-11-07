@@ -18,13 +18,13 @@
  */
 class Solution {
  public:
-  vector<vector<int>> levelOrder(TreeNode *root) {
+  vector<vector<int>> levelOrder(TreeNode* root) {
     vector<vector<int>> trees;
     if (!root) return trees;
-    vector<TreeNode *> nodes;
+    vector<TreeNode*> nodes;
     nodes.push_back(root);
     while (!nodes.empty()) {
-      vector<TreeNode *> new_nodes;
+      vector<TreeNode*> new_nodes;
       vector<int> tree;
       for (int i = 0; i < nodes.size(); ++i) {
         tree.push_back(nodes[i]->val);
@@ -42,4 +42,3 @@ class Solution {
   }
 };
 // @lc code=end
-

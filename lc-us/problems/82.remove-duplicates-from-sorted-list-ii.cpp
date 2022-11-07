@@ -17,10 +17,10 @@
  */
 class Solution {
  public:
-  ListNode *deleteDuplicates(ListNode *head) {
+  ListNode* deleteDuplicates(ListNode* head) {
     ListNode dummy(0);
     dummy.next = head;
-    ListNode *cur = &dummy;
+    ListNode* cur = &dummy;
     int duplicate;
     while (cur->next && cur->next->next) {
       if (cur->next->val == cur->next->next->val) {
@@ -36,4 +36,3 @@ class Solution {
   }
 };
 // @lc code=end
-

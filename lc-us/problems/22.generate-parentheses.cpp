@@ -14,9 +14,9 @@ class Solution {
     generateParenthesisUtil(n, n, s, res);
     return res;
   }
+
  private:
-  void generateParenthesisUtil(int left, int right, string s,
-                               vector<string> &res) {
+  void generateParenthesisUtil(int left, int right, string s, vector<string>& res) {
     if (left == 0 && right == 0) {
       res.push_back(s);
       return;
@@ -31,4 +31,3 @@ class Solution {
   }
 };
 // @lc code=end
-

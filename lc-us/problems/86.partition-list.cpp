@@ -17,11 +17,11 @@
  */
 class Solution {
  public:
-  ListNode *partition(ListNode *head, int x) {
-    ListNode *small = new ListNode(0);
-    ListNode *big = new ListNode(0);
-    ListNode *curr_small = small;
-    ListNode *curr_big = big;
+  ListNode* partition(ListNode* head, int x) {
+    ListNode* small = new ListNode(0);
+    ListNode* big = new ListNode(0);
+    ListNode* curr_small = small;
+    ListNode* curr_big = big;
     while (head) {
       if (head->val < x) {
         curr_small->next = head;
@@ -38,4 +38,3 @@ class Solution {
   }
 };
 // @lc code=end
-

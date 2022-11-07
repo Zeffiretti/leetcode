@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int singleNumber(vector<int> &nums) {
+  int singleNumber(vector<int>& nums) {
     int res = nums[0];
     unordered_map<int, int> map;
     for (int num : nums) {
@@ -23,4 +23,3 @@ class Solution {
   }
 };
 // @lc code=end
-

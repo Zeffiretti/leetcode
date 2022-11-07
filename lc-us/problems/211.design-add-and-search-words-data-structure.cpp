@@ -6,7 +6,7 @@
 #include "utils.h"
 // @lc code=start
 struct TrieNode {
-  TrieNode *children[26];
+  TrieNode* children[26];
   bool isWord;
   TrieNode() : isWord(false) {
     for (int i = 0; i < 26; ++i) {
@@ -16,11 +16,9 @@ struct TrieNode {
 };
 class WordDictionary {
  public:
-  WordDictionary() {
-    root = new TrieNode();
-  }
+  WordDictionary() { root = new TrieNode(); }
   void addWord(string word) {
-    TrieNode *cur = root;
+    TrieNode* cur = root;
     for (char c : word) {
       if (cur->children[c - 'a'] == nullptr) {
         cur->children[c - 'a'] = new TrieNode();
@@ -29,12 +27,11 @@ class WordDictionary {
     }
     cur->isWord = true;
   }
-  bool search(string word) {
-    return search(word, root);
-  }
+  bool search(string word) { return search(word, root); }
+
  private:
-  TrieNode *root;
-  bool search(string word, TrieNode *cur) {
+  TrieNode* root;
+  bool search(string word, TrieNode* cur) {
     if (word.empty()) {
       return cur->isWord;
     }
@@ -60,4 +57,3 @@ class WordDictionary {
  * bool param_2 = obj->search(word);
  */
 // @lc code=end
-

@@ -12,7 +12,7 @@ class Solution {
     vector<string> res;
     if (digits.empty()) return res;
     int size = 1;
-    for (int pos = 0; pos < digits.size()  ; pos ++) {
+    for (int pos = 0; pos < digits.size(); pos++) {
       size *= map[digits[pos] - '0'].size();
     }
     res.resize(size);
@@ -32,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -19,22 +19,21 @@ class Solution {
     return res;
   }
 
-//  private:
-//   vector<int> grayCode(int n, int i) {
-//     vector<int> res;
-//     if (i == 0) {
-//       res.push_back(0);
-//     }
-//     if (i == n) {
-//       res.push_back(1);
-//     }
-//     vector<int> left = grayCode(n, i - 1);
-//     vector<int> right = grayCode(n, i);
-//     for (int j = 0; j < left.size(); j++) {
-//       res.push_back(left[j] + 2 ^ right[j]);
-//     }
-//     return res;
-//   }
+  //  private:
+  //   vector<int> grayCode(int n, int i) {
+  //     vector<int> res;
+  //     if (i == 0) {
+  //       res.push_back(0);
+  //     }
+  //     if (i == n) {
+  //       res.push_back(1);
+  //     }
+  //     vector<int> left = grayCode(n, i - 1);
+  //     vector<int> right = grayCode(n, i);
+  //     for (int j = 0; j < left.size(); j++) {
+  //       res.push_back(left[j] + 2 ^ right[j]);
+  //     }
+  //     return res;
+  //   }
 };
 // @lc code=end
-

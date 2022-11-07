@@ -7,11 +7,11 @@
 // @lc code=start
 class Solution {
  public:
-  vector<int> findOrder(int numCourses, vector<vector<int>> &prerequisites) {
+  vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
     vector<int> res;
     unordered_map<int, vector<int>> graph;
     vector<int> indegree(numCourses, 0);
-    for (auto &pre : prerequisites) {
+    for (auto& pre : prerequisites) {
       graph[pre[1]].push_back(pre[0]);
       ++indegree[pre[0]];
     }
@@ -27,7 +27,7 @@ class Solution {
       res.push_back(cur);
       q.pop();
       ++count;
-      for (auto &next : graph[cur]) {
+      for (auto& next : graph[cur]) {
         --indegree[next];
         if (indegree[next] == 0) {
           q.push(next);
@@ -41,4 +41,3 @@ class Solution {
   }
 };
 // @lc code=end
-

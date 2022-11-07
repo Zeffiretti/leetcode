@@ -47,7 +47,7 @@ class Solution {
 };
 // @lc code=end
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   Solution sol;
   string s = "EPY2giL";
   cout << sol.reverseWords(s) << "over" << endl;

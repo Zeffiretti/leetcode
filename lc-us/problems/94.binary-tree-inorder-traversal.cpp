@@ -18,13 +18,13 @@
  */
 class Solution {
  public:
-  vector<int> inorderTraversal(TreeNode *root) {
+  vector<int> inorderTraversal(TreeNode* root) {
     vector<int> res;
     if (root == nullptr) {
       return res;
     }
-    stack<TreeNode *> st;
-    TreeNode *cur = root;
+    stack<TreeNode*> st;
+    TreeNode* cur = root;
     while (!st.empty() || cur != nullptr) {
       if (cur != nullptr) {
         st.push(cur);
@@ -40,4 +40,3 @@ class Solution {
   }
 };
 // @lc code=end
-

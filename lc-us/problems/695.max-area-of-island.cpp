@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int maxAreaOfIsland(vector<vector<int>> &grid) {
+  int maxAreaOfIsland(vector<vector<int>>& grid) {
     int m = grid.size();
     int n = grid[0].size();
     int max_area = 0;
@@ -21,7 +21,7 @@ class Solution {
     }
     return max_area;
   }
-  int dfs(vector<vector<int>> &grid, int i, int j) {
+  int dfs(vector<vector<int>>& grid, int i, int j) {
     if (i < 0 || i >= grid.size() || j < 0 || j >= grid[0].size()) return 0;
     if (grid[i][j] == 0) return 0;
     grid[i][j] = 0;
@@ -29,4 +29,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -15,8 +15,7 @@ class Solution {
   }
 
  private:
-  void solveNQueensUtil(vector<vector<string>> &ans, vector<string> &cur,
-                        int n, int row) {
+  void solveNQueensUtil(vector<vector<string>>& ans, vector<string>& cur, int n, int row) {
     if (row == n) {
       ans.push_back(cur);
       return;
@@ -29,7 +28,7 @@ class Solution {
       }
     }
   }
-  bool isValid(vector<string> &cur, int row, int col) {
+  bool isValid(vector<string>& cur, int row, int col) {
     for (int i = 0; i < row; i++) {
       if (cur[i][col] == 'Q') return false;
     }
@@ -43,4 +42,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -7,15 +7,14 @@
 // @lc code=start
 class Solution {
  public:
-  vector<vector<int>> combinationSum2(vector<int> &candidates, int target) {
+  vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
     vector<vector<int>> res;
     vector<int> path;
     std::sort(candidates.begin(), candidates.end());
     dfs(candidates, target, 0, path, res);
     return res;
   }
-  void dfs(vector<int> &candidates, int target, int start, vector<int> &path,
-           vector<vector<int>> &res) {
+  void dfs(vector<int>& candidates, int target, int start, vector<int>& path, vector<vector<int>>& res) {
     if (target == 0) {
       res.push_back(path);
       return;
@@ -34,4 +33,3 @@ class Solution {
   }
 };
 // @lc code=end
-

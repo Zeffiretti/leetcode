@@ -7,13 +7,13 @@
 // @lc code=start
 class Solution {
  public:
-  int trap(vector<int> &height) {
+  int trap(vector<int>& height) {
     int left = 0, right = height.size() - 1;
     int left_max = 0, right_max = 0;
     int res = 0;
     while (left < right) {
       if (height[left] < height[right]) {
-        if (height[left] >= left_max) { // a significant judge
+        if (height[left] >= left_max) {  // a significant judge
           left_max = height[left];
         } else {
           res += left_max - height[left];
@@ -32,4 +32,3 @@ class Solution {
   }
 };
 // @lc code=end
-

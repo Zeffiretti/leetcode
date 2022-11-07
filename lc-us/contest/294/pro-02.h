@@ -1,11 +1,11 @@
-#include <vector>
 #include <algorithm>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int maximumBags(vector<int> &capacity, vector<int> &rocks, int additionalRocks) {
+  int maximumBags(vector<int>& capacity, vector<int>& rocks, int additionalRocks) {
     vector<int> free_space;
     for (int i = 0; i < capacity.size(); i++) {
       free_space.push_back(capacity[i] - rocks[i]);
@@ -14,7 +14,7 @@ class Solution {
     //   cout << free_space[i] << " ";
     // }
     // cout << endl;
-    sort(free_space.begin(), free_space.end());//ascending
+    sort(free_space.begin(), free_space.end());  // ascending
     // for (int i = 0; i < free_space.size(); i++) {
     //   cout << free_space[i] << " ";
     // }

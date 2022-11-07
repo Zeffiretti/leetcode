@@ -7,13 +7,13 @@
 // @lc code=start
 class Solution {
  public:
-  int findMin(vector<int> &nums) {
+  int findMin(vector<int>& nums) {
     // Find Minimum in Rotated Sorted Array
     int start = 0;
     int end = nums.size() - 1;
     return findMinBetween(nums, start, end);
   }
-  int findMinBetween(vector<int> &nums, int start, int end) {
+  int findMinBetween(vector<int>& nums, int start, int end) {
     if (start == end) {
       return nums[start];
     }
@@ -26,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

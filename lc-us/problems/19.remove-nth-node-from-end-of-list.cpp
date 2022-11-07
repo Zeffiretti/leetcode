@@ -17,9 +17,9 @@
  */
 class Solution {
  public:
-  ListNode *removeNthFromEnd(ListNode *head, int n) {
-    ListNode *pNode = head;
-    ListNode *qNode = pNode;
+  ListNode* removeNthFromEnd(ListNode* head, int n) {
+    ListNode* pNode = head;
+    ListNode* qNode = pNode;
     for (int i = 0; i < n; i++) {
       qNode = qNode->next;
     }
@@ -35,4 +35,3 @@ class Solution {
   }
 };
 // @lc code=end
-

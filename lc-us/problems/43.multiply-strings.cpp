@@ -82,7 +82,7 @@ class Solution {
   }
 };
 // @lc code=end
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   Solution s;
   string ans = s.stadd("0", "0");
   cout << ans << endl;

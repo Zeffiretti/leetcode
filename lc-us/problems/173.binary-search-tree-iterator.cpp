@@ -18,7 +18,7 @@
  */
 class BSTIterator {
  public:
-  BSTIterator(TreeNode *root) {
+  BSTIterator(TreeNode* root) {
     while (root && root->left) {
       stk.push(root);
       root = root->left;
@@ -28,7 +28,7 @@ class BSTIterator {
 
   int next() {
     if (!hasNext()) return -1;
-    TreeNode *node = stk.top();
+    TreeNode* node = stk.top();
     stk.pop();
     int res = node->val;
     if (node->right) {
@@ -42,11 +42,10 @@ class BSTIterator {
     return res;
   }
 
-  bool hasNext() {
-    return !stk.empty();
-  }
+  bool hasNext() { return !stk.empty(); }
+
  private:
-  stack<TreeNode *> stk;
+  stack<TreeNode*> stk;
 };
 
 /**
@@ -56,4 +55,3 @@ class BSTIterator {
  * bool param_2 = obj->hasNext();
  */
 // @lc code=end
-

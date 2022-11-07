@@ -17,16 +17,16 @@
  */
 class Solution {
  public:
-  ListNode *insertionSortList(ListNode *head) {
+  ListNode* insertionSortList(ListNode* head) {
     if (head == nullptr) {
       return nullptr;
     }
-    ListNode *mhead = new ListNode(head->val);
-    ListNode *p = head->next;
+    ListNode* mhead = new ListNode(head->val);
+    ListNode* p = head->next;
     while (p != nullptr) {
-      ListNode *q = mhead;
+      ListNode* q = mhead;
       if (p->val <= mhead->val) {
-        ListNode *tmp = new ListNode(p->val);
+        ListNode* tmp = new ListNode(p->val);
         tmp->next = mhead;
         mhead = tmp;
         p = p->next;
@@ -35,7 +35,7 @@ class Solution {
       while (q->next != nullptr && q->next->val <= p->val) {
         q = q->next;
       }
-      ListNode *tmp = q->next;
+      ListNode* tmp = q->next;
       q->next = new ListNode(p->val);
       q->next->next = tmp;
       p = p->next;
@@ -44,4 +44,3 @@ class Solution {
   }
 };
 // @lc code=end
-

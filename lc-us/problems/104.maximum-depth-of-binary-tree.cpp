@@ -18,7 +18,7 @@
  */
 class Solution {
  public:
-  int maxDepth(TreeNode *root) {
+  int maxDepth(TreeNode* root) {
     if (!root) return 0;
     if (!root->left && !root->right) return 1;
     int left = maxDepth(root->left);
@@ -27,4 +27,3 @@ class Solution {
   }
 };
 // @lc code=end
-

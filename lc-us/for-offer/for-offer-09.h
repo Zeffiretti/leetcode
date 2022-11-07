@@ -1,13 +1,12 @@
-#include <cstdio>
-#include <iostream>
-#include <string>
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
 #include <ctime>
-#include <vector>
-#include <unordered_map>
-#include <string>
+#include <iostream>
 #include <stack>
+#include <string>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 // implement Queue using two stacks
@@ -18,9 +17,7 @@ class CQueue {
     s2 = new stack<int>();
   }
 
-  void appendTail(int value) {
-    s1->push(value);
-  }
+  void appendTail(int value) { s1->push(value); }
 
   int deleteHead() {
     if (s2->empty()) {
@@ -36,7 +33,8 @@ class CQueue {
     s2->pop();
     return res;
   }
+
  private:
-  stack<int> *s1;
-  stack<int> *s2;
+  stack<int>* s1;
+  stack<int>* s2;
 };

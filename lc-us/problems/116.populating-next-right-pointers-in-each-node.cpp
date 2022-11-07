@@ -25,13 +25,13 @@ public:
 
 class Solution {
  public:
-  Node *connect(Node *root) {
+  Node* connect(Node* root) {
     if (!root) return nullptr;
-    Node *cur = root;
-    vector<Node *> cur_level;
+    Node* cur = root;
+    vector<Node*> cur_level;
     cur_level.push_back(cur);
     while (!cur_level.empty()) {
-      vector<Node *> next_level;
+      vector<Node*> next_level;
       for (int i = 0; i < cur_level.size(); i++) {
         if (i < cur_level.size() - 1) {
           cur_level[i]->next = cur_level[i + 1];
@@ -45,4 +45,3 @@ class Solution {
   }
 };
 // @lc code=end
-

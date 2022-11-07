@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  void rotate(vector<int> &nums, int k) {
+  void rotate(vector<int>& nums, int k) {
     int n = nums.size();
     k = k % n;
     reverse(nums.begin(), nums.begin() + n - k);
@@ -16,4 +16,3 @@ class Solution {
   }
 };
 // @lc code=end
-

@@ -8,13 +8,13 @@
 
 class Solution {
  public:
-  vector<vector<int>> permute(vector<int> &nums) {
+  vector<vector<int>> permute(vector<int>& nums) {
     vector<vector<int>> res;
     vector<int> tmp;
     dfs(res, tmp, nums);
     return res;
   }
-  void dfs(vector<vector<int>> &res, vector<int> &nums, vector<int> remain) {
+  void dfs(vector<vector<int>>& res, vector<int>& nums, vector<int> remain) {
     if (remain.empty()) {
       res.push_back(nums);
       return;
@@ -31,4 +31,3 @@ class Solution {
   }
 };
 // @lc code=end
-

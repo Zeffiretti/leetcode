@@ -1,12 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
-  int largestCombination(vector<int> &candidates) {
+  int largestCombination(vector<int>& candidates) {
     if (candidates.size() == 1) return 1;
     vector<pair<int, int>> special;
     special.push_back({candidates[0], 1});

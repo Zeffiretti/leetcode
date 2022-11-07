@@ -1,13 +1,12 @@
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
+#include <iostream>
 #include <iterator>
 #include <list>
 #include <map>
 #include <set>
-#include <list>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 using namespace std;
 
 class TextEditor {
@@ -54,6 +53,7 @@ class TextEditor {
     int left = min(10, cursor);
     return string(text.begin() + cursor - left, text.begin() + cursor);
   }
+
  private:
   string text;
   int cursor;

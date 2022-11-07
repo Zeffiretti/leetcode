@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int maxSubArray(vector<int> &nums) {
+  int maxSubArray(vector<int>& nums) {
     int res = INT_MIN;
     int f_n = -1;
     for (int i = 0; i < nums.size(); ++i) {
@@ -19,8 +19,7 @@ class Solution {
 };
 // @lc code=end
 
-
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   vector<int> nums = {0, 0, 0, 0, 0, -2, 1, -3, 4, -1, 0, 0, 0, 0, 2, 1, -5, 4, 0, 0, 0, 0};
   Solution ss;
   cout << ss.maxSubArray(nums);

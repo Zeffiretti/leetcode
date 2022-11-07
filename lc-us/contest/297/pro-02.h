@@ -1,15 +1,15 @@
-#include <vector>
+#include <stdio.h>
 #include <algorithm>
 #include <iostream>
 #include <string>
-#include <stdio.h>
+#include <vector>
 using namespace std;
 
 #include <stdio.h>
 
 class Solution {
  public:
-  int minPathCost(vector<vector<int>> &grid, vector<vector<int>> &moveCost) {
+  int minPathCost(vector<vector<int>>& grid, vector<vector<int>>& moveCost) {
     int res = INT_MAX;
     vector<vector<int>> dp(grid.size(), vector<int>(grid[0].size(), INT_MAX));
     for (int i = 0; i < grid[0].size(); ++i) {

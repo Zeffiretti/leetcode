@@ -1,14 +1,14 @@
-#include <vector>
-#include <string>
-#include <iostream>
-#include <unordered_map>
 #include <algorithm>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Solution {
  public:
 #define ll long long
-  vector<int> successfulPairs(vector<int> &spells, vector<int> &potions, long long success) {
+  vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {
     vector<int> res(spells.size(), 0);
     vector<vector<int>> spell_map(spells.size());
     // cout << "spell_map: " << endl;
@@ -28,7 +28,7 @@ class Solution {
       while (sp * po < success) {
         ++j;
         // cout << "j=" << j << endl;
-        if (j >= potions.size())break;
+        if (j >= potions.size()) break;
         po = potions[j];
       }
       res[spell_map[i][1]] = potions.size() - j;

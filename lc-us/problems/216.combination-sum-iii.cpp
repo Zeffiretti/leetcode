@@ -14,7 +14,7 @@ class Solution {
     dfs(res, cur, k, n, 1);
     return res;
   }
-  void dfs(vector<vector<int>> &res, vector<int> &cur, int k, int n, int start) {
+  void dfs(vector<vector<int>>& res, vector<int>& cur, int k, int n, int start) {
     if (cur.size() == k) {
       if (n == 0) {
         res.push_back(cur);
@@ -30,4 +30,3 @@ class Solution {
   }
 };
 // @lc code=end
-

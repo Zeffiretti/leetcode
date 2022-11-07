@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  int majorityElement(vector<int> &nums) {
+  int majorityElement(vector<int>& nums) {
     unordered_map<int, int> map;
     int majority = nums.size() / 2;
     int res = nums[0];
@@ -26,4 +26,3 @@ class Solution {
   }
 };
 // @lc code=end
-

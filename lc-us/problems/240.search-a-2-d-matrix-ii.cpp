@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
  public:
-  bool searchMatrix(vector<vector<int>> &matrix, int target) {
+  bool searchMatrix(vector<vector<int>>& matrix, int target) {
     if (matrix.empty() || matrix[0].empty()) {
       return false;
     }
@@ -27,4 +27,3 @@ class Solution {
   }
 };
 // @lc code=end
-
