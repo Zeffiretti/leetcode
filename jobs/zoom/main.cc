@@ -8,38 +8,38 @@
 int main(int argc, char** argv) {
   UNUSED(argc);
   UNUSED(argv);
-  int a,b;
+  int a, b;
   int n;
   std::cin >> a >> b >> n;
-  for(int i=0; i<n; ++i){
+  for (int i = 0; i < n; ++i) {
     char op;
     int val;
     std::cin >> op >> val;
-    if(op=='+'){
-      if(val>=0){
-        if(a>=b){
+    if (op == '+') {
+      if (val >= 0) {
+        if (a >= b) {
           a += val;
-        }else{
+        } else {
           b += val;
         }
-      }else{
-        if(a>=b){
+      } else {
+        if (a >= b) {
           b += val;
-        }else{
+        } else {
           a += val;
         }
       }
-    }else{
-      if(val>=0){
-        if(a>=b){
+    } else {
+      if (val >= 0) {
+        if (a >= b) {
           b -= val;
-        }else{
+        } else {
           a -= val;
         }
-      }else{
-        if(a>=b){
+      } else {
+        if (a >= b) {
           a -= val;
-        }else{
+        } else {
           b -= val;
         }
       }
