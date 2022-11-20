@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 
-
 template <typename index_type, typename value_type>
 class HashMap {
  public:

@@ -1,5 +1,3 @@
-// created by Hiesh on Mar. 10, 2022
-
 #ifndef MYALGORITHM_H
 #define MYALGORITHM_H
 
