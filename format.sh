@@ -12,7 +12,7 @@ format_dir(){
   for file in `ls -a $1`
     do
       if [ -d $1"/"$file ];  then
-        if [[ $file != '.' && $file != '..' && $file != 'build' ]];  then
+        if [[ $file != '.' && $file != '..' && $file != 'build' && ! $file =~ ^\. ]];  then
             format_dir $1"/"$file
         fi
       else
