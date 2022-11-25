@@ -2,8 +2,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 struct ListNode {
   int val;
   ListNode* next;
@@ -14,13 +12,13 @@ struct ListNode {
 
 class Solution {
  public:
-  vector<int> reversePrint(ListNode* head) {
-    stack<int> st;
+  std::vector<int> reversePrint(ListNode* head) {
+    std::stack<int> st;
     while (head) {
       st.push(head->val);
       head = head->next;
     }
-    vector<int> res;
+    std::vector<int> res;
     while (!st.empty()) {
       res.push_back(st.top());
       st.pop();

@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 class Node {
  public:
@@ -7,12 +6,11 @@ class Node {
   Node* left;
   Node* right;
 
-  Node() {}
-
+  Node() = default;
   Node(int _val) {
     val = _val;
-    left = NULL;
-    right = NULL;
+    left = nullptr;
+    right = nullptr;
   }
 
   Node(int _val, Node* _left, Node* _right) {
@@ -25,18 +23,18 @@ class Node {
 class Solution {
  public:
   Node* treeToDoublyList(Node* root) {
-    if (root == NULL) return NULL;
-    Node* head = NULL;
-    Node* tail = NULL;
+    if (root == nullptr) return nullptr;
+    Node* head = nullptr;
+    Node* tail = nullptr;
     dfs(root, &head, &tail);
     head->left = tail;
     tail->right = head;
     return head;
   }
   void dfs(Node* root, Node** head, Node** tail) {
-    if (root == NULL) return;
+    if (root == nullptr) return;
     dfs(root->left, head, tail);
-    if (*head == NULL) {
+    if (*head == nullptr) {
       *head = root;
     } else {
       root->left = *tail;

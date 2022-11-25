@@ -1,14 +1,14 @@
 #include <string>
-using namespace std;
+
 class Solution {
  public:
-  string replaceSpace(string s) {
-    string res;
-    for (int i = 0; i < s.size(); i++) {
-      if (s[i] == ' ') {
+  std::string replaceSpace(std::string s) {
+    std::string res;
+    for (auto ch : s) {
+      if (ch == ' ') {
         res += "%20";
       } else {
-        res += s[i];
+        res += ch;
       }
     }
     return res;

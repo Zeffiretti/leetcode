@@ -1,10 +1,10 @@
 #include <vector>
-using namespace std;
+
 class Solution {
  public:
   int movingCount(int m, int n, int k) {
     if (k == 0) return 1;
-    vector<vector<bool>> accessed(m, vector<bool>(n, false));
+    std::vector<std::vector<bool>> accessed(m, std::vector<bool>(n, false));
     int count = 0;
     accessed[0][0] = true;
     for (int i = 0; i < m; i++) {

@@ -2,7 +2,7 @@
 
 class Solution {
  public:
-  bool isNumber(string s) {
+  bool isNumber(std::string s) {
     int index = 0;
     while (index < s.size() && s[index] == ' ') {  // jump over leading spaces
       index++;

@@ -7,14 +7,13 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-using namespace std;
 
 // implement Queue using two stacks
 class CQueue {
  public:
   CQueue() {
-    s1 = new stack<int>();
-    s2 = new stack<int>();
+    s1 = new std::stack<int>();
+    s2 = new std::stack<int>();
   }
 
   void appendTail(int value) { s1->push(value); }
@@ -35,6 +34,6 @@ class CQueue {
   }
 
  private:
-  stack<int>* s1;
-  stack<int>* s2;
+  std::stack<int>* s1;
+  std::stack<int>* s2;
 };

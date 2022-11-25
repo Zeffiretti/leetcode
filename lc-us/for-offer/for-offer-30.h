@@ -7,23 +7,17 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-using namespace std;
 
 class MinStack {
  public:
-  /** initialize your data structure here. */
   MinStack() { data.clear(); }
-
   void push(int x) {}
-
   void pop() {}
-
   int top() {}
-
   int min() {}
 
  private:
-  vector<int> data;
+  std::vector<int> data;
   int min_val;
 };
 

@@ -1,4 +1,17 @@
 #!/bin/bash
+# This script formats the code in the current directory
+# using clang-format. It is intended to be run from the
+# root of the repository.
+
+help() {
+  sed -n 's/^# //p' "$0"
+}
+
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+  help
+  exit 0
+fi
+
 set -ex
 
 SCRIPT=$(readlink -f "$0")
@@ -21,7 +34,7 @@ format_dir(){
           clang-format -i $file --style=file
         fi
       fi
-    done
+  done
 }
 cd $SCRIPTPATH
 format_dir $SCRIPTPATH

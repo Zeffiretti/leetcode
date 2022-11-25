@@ -1,10 +1,11 @@
 #include <vector>
-using namespace std;
 
 class Solution {
  public:
-  bool verifyPostorder(vector<int>& postorder) { return verifyPostorder(postorder, 0, postorder.size() - 1); }
-  bool verifyPostorder(vector<int>& postorder, int start, int end) {
+  bool verifyPostorder(const std::vector<int>& postorder) {
+    return verifyPostorder(postorder, 0, postorder.size() - 1);
+  }
+  bool verifyPostorder(const std::vector<int>& postorder, int start, int end) {
     if (start >= end) return true;
     int i = start;
     while (postorder[i] < postorder[end]) ++i;
