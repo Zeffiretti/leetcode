@@ -8,6 +8,9 @@
 #define UNUSED(X) (void)(X)
 
 int main(int argc, char** argv) {
+  UNUSED(argc);
+  UNUSED(argv);
+
   int n, m;
   std::cin >> n >> m;
   std::vector<std::vector<char>> map(n, std::vector<char>(m, ' '));
